@@ -1,0 +1,9 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:misk.crypto$computeMac(com.google.crypto.tink.Mac, kotlin.String)misk.crypto/com.google.crypto.tink.-mac/compute-mac.md
+$dokka.location:misk.crypto$decrypt(com.google.crypto.tink.Aead, okio.ByteString, kotlin.ByteArray)misk.crypto/com.google.crypto.tink.-aead/decrypt.md
+$dokka.location:misk.crypto$decryptDeterministically(com.google.crypto.tink.DeterministicAead, okio.ByteString, kotlin.ByteArray)misk.crypto/com.google.crypto.tink.-deterministic-aead/decrypt-deterministically.md
+$dokka.location:misk.crypto$encrypt(com.google.crypto.tink.Aead, okio.ByteString, kotlin.ByteArray)misk.crypto/com.google.crypto.tink.-aead/encrypt.md
+$dokka.location:misk.crypto$encryptDeterministically(com.google.crypto.tink.DeterministicAead, okio.ByteString, kotlin.ByteArray)misk.crypto/com.google.crypto.tink.-deterministic-aead/encrypt-deterministically.md
+$dokka.location:misk.crypto$verifyMac(com.google.crypto.tink.Mac, kotlin.String, kotlin.String)misk.crypto/com.google.crypto.tink.-mac/verify-mac.md
+misk.crypto

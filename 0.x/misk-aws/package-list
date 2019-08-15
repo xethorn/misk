@@ -1,0 +1,7 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:misk.jobqueue.sqs$deadLetterQueue#misk.jobqueue.QueueNamemisk.jobqueue.sqs/misk.jobqueue.-queue-name/dead-letter-queue.md
+$dokka.location:misk.jobqueue.sqs$isDeadLetterQueue#misk.jobqueue.QueueNamemisk.jobqueue.sqs/misk.jobqueue.-queue-name/is-dead-letter-queue.md
+$dokka.location:misk.jobqueue.sqs$parentQueue#misk.jobqueue.QueueNamemisk.jobqueue.sqs/misk.jobqueue.-queue-name/parent-queue.md
+misk.cloud.aws
+misk.jobqueue.sqs

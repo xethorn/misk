@@ -1,0 +1,6 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:misk.jdbc$quoteSql(kotlin.String, kotlin.String)misk.jdbc/kotlin.-string/quote-sql.md
+$dokka.location:misk.jdbc$sublistAfterMatch(kotlin.collections.List((misk.jdbc.sublistAfterMatch.T)), kotlin.Function1((misk.jdbc.sublistAfterMatch.T, kotlin.Boolean)))misk.jdbc/kotlin.collections.-list/sublist-after-match.md
+misk.hibernate
+misk.jdbc

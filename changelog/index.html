@@ -1,0 +1,1109 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Misk: Microservice Container for Kotlin">
+      
+      
+      
+        <meta name="author" content="Square, Inc.">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Change Log - Misk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/app.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#change-log" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Misk" class="md-header-nav__button md-logo">
+          
+            <img src="../img/cashapp.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Misk
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Change Log
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/cashapp/misk/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Misk
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Misk" class="md-nav__button md-logo">
+      
+        <img src="../img/cashapp.png" width="48" height="48">
+      
+    </a>
+    Misk
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/cashapp/misk/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Misk
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      0.x API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        0.x API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk/" title="misk" class="md-nav__link">
+      misk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-aws/" title="misk-aws" class="md-nav__link">
+      misk-aws
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-crypto/" title="misk-crypto" class="md-nav__link">
+      misk-crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-eventrouter/" title="misk-eventrouter" class="md-nav__link">
+      misk-eventrouter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-events/" title="misk-events" class="md-nav__link">
+      misk-events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-gcp/" title="misk-gcp" class="md-nav__link">
+      misk-gcp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-gcp-testing/" title="misk-gcp-testing" class="md-nav__link">
+      misk-gcp-testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-grpc-tests/" title="misk-grpc-tests" class="md-nav__link">
+      misk-grpc-tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-hibernate/" title="misk-hibernate" class="md-nav__link">
+      misk-hibernate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-hibernate-testing/" title="misk-hibernate-testing" class="md-nav__link">
+      misk-hibernate-testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-inject/" title="misk-inject" class="md-nav__link">
+      misk-inject
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-jaeger/" title="misk-jaeger" class="md-nav__link">
+      misk-jaeger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-jobqueue/" title="misk-jobqueue" class="md-nav__link">
+      misk-jobqueue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-jobqueue-testing/" title="misk-jobqueue-testing" class="md-nav__link">
+      misk-jobqueue-testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-metrics-digester/" title="misk-metrics-digester" class="md-nav__link">
+      misk-metrics-digester
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-prometheus/" title="misk-prometheus" class="md-nav__link">
+      misk-prometheus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-redis/" title="misk-redis" class="md-nav__link">
+      misk-redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-testing/" title="misk-testing" class="md-nav__link">
+      misk-testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-zipkin/" title="misk-zipkin" class="md-nav__link">
+      misk-zipkin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-zookeeper/" title="misk-zookeeper" class="md-nav__link">
+      misk-zookeeper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.x/misk-zoopkeeper-testing/index.md" title="misk-zoopkeeper-testing" class="md-nav__link">
+      misk-zoopkeeper-testing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Change Log
+      </label>
+    
+    <a href="./" title="Change Log" class="md-nav__link md-nav__link--active">
+      Change Log
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-025-2018-06-11" title="Version 0.2.5 (2018-06-11)" class="md-nav__link">
+    Version 0.2.5 (2018-06-11)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-024-2018-05-14" title="Version 0.2.4 (2018-05-14)" class="md-nav__link">
+    Version 0.2.4 (2018-05-14)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_1" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_1" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-023-2018-04-27" title="Version 0.2.3 (2018-04-27)" class="md-nav__link">
+    Version 0.2.3 (2018-04-27)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_2" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_2" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-021-2018-03-26" title="Version 0.2.1 (2018-03-26)" class="md-nav__link">
+    Version 0.2.1 (2018-03-26)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_3" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_3" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-020-2018-03-13" title="Version 0.2.0 (2018-03-13)" class="md-nav__link">
+    Version 0.2.0 (2018-03-13)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_4" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_4" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-010-2018-02-01" title="Version 0.1.0 (2018-02-01)" class="md-nav__link">
+    Version 0.1.0 (2018-02-01)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../releasing/" title="Releasing" class="md-nav__link">
+      Releasing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://stackoverflow.com/questions/tagged/misk?sort=active" title="Stack Overflow ⏏" class="md-nav__link">
+      Stack Overflow ⏏
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-025-2018-06-11" title="Version 0.2.5 (2018-06-11)" class="md-nav__link">
+    Version 0.2.5 (2018-06-11)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-024-2018-05-14" title="Version 0.2.4 (2018-05-14)" class="md-nav__link">
+    Version 0.2.4 (2018-05-14)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_1" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_1" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-023-2018-04-27" title="Version 0.2.3 (2018-04-27)" class="md-nav__link">
+    Version 0.2.3 (2018-04-27)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_2" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_2" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-021-2018-03-26" title="Version 0.2.1 (2018-03-26)" class="md-nav__link">
+    Version 0.2.1 (2018-03-26)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_3" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_3" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-020-2018-03-13" title="Version 0.2.0 (2018-03-13)" class="md-nav__link">
+    Version 0.2.0 (2018-03-13)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_4" title="New" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_4" title="Fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-010-2018-02-01" title="Version 0.1.0 (2018-02-01)" class="md-nav__link">
+    Version 0.1.0 (2018-02-01)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/cashapp/misk/edit/master/docs/changelog.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="version-025-2018-06-11">Version 0.2.5 <em>(2018-06-11)</em><a class="headerlink" href="#version-025-2018-06-11" title="Permanent link">&para;</a></h2>
+<h3 id="new">New<a class="headerlink" href="#new" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cluster interface and DataSourceCluster bindings</li>
+<li>Add a JPAEntityModule for binding entities for a DataSource</li>
+<li>Hook up raw Hibernate APIs</li>
+<li>Use JPA entity types in HibernateModule.</li>
+<li>Introduce FakeResourceLoader</li>
+<li>SchemaMigrator for running and tracking schema migrations.</li>
+<li>Update Misk version in Dockerfiles to 0.2.5</li>
+<li>Drop support for unqualified datasources.</li>
+<li>move exemplars into sample directory in preparation for more of them</li>
+<li>Make all Kotlin warnings build errors</li>
+<li>Allow services to specify dependencies on other services.</li>
+<li>Fast fail on dependency cycles.</li>
+<li>jre8 was deprecated for kotlin 1.2</li>
+<li>Early types for the Transacter APIs</li>
+<li>Queries in the Misk Hibernate API.</li>
+<li>Implement Query with dynamic proxies and reflection</li>
+<li>Offer strict validation and nice errors in ReflectionQueryFactory</li>
+<li>Log the reasons why liveness/readiness checks fail</li>
+<li>URL shortener sample</li>
+<li>Support more operators in Query</li>
+<li>Wire up Hibernate event listeners through Guice.</li>
+<li>HibernateTestingModule.</li>
+<li>Switch tests to MySQL</li>
+<li>Rollback transactions on exceptions</li>
+<li>Delete DataSourceModule. It&rsquo;s redundant with HibernateModule.</li>
+<li>Support ByteString columns</li>
+<li>Misk containers should not run as root</li>
+<li>DbTimestampedEntity</li>
+</ul>
+<h3 id="fix">Fix<a class="headerlink" href="#fix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Don&rsquo;t inject until after services are started.</li>
+<li>Tidy up some test cases.</li>
+<li>Fix a missing dependency in exemplar</li>
+<li>Don&rsquo;t use KubernetesHealthCheck with LocalClusterConnector</li>
+</ul>
+<h2 id="version-024-2018-05-14">Version 0.2.4 <em>(2018-05-14)</em><a class="headerlink" href="#version-024-2018-05-14" title="Permanent link">&para;</a></h2>
+<h3 id="new_1">New<a class="headerlink" href="#new_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add support for protobuf over HTTP</li>
+<li>Cloudwatch Trail logging support</li>
+<li>Add retry() helper</li>
+<li>Add Backoff/ExponentialBackoff</li>
+<li>MiskCaller and authz support</li>
+<li>Adds a DataSourceModule</li>
+<li>Add support for logging to StackDriver</li>
+</ul>
+<h3 id="fix_1">Fix<a class="headerlink" href="#fix_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Move static resources from web root into resources</li>
+<li>Move web-specific NetworkInterceptor into web</li>
+<li>Remove use of instance metadata endpoints</li>
+</ul>
+<h2 id="version-023-2018-04-27">Version 0.2.3 <em>(2018-04-27)</em><a class="headerlink" href="#version-023-2018-04-27" title="Permanent link">&para;</a></h2>
+<h3 id="new_2">New<a class="headerlink" href="#new_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add kubernetes java client so that hosts can know their peers</li>
+<li>Use EventRouter for exemplarchat. Add a static resource mapper</li>
+<li>Create a cluster wide admin healthcheck page</li>
+<li>Change CacheBuilder to be mapOf since no concurrency</li>
+<li>Adds a healthcheck for the kubernetes client</li>
+<li>Adds a local cluster connector so that development functions</li>
+</ul>
+<h3 id="fix_2">Fix<a class="headerlink" href="#fix_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Don&rsquo;t treat assembly as a release when running in CI</li>
+<li>Fix tracing startup when none is configured</li>
+<li>Various event router fixes and refactorings</li>
+</ul>
+<h2 id="version-021-2018-03-26">Version 0.2.1 <em>(2018-03-26)</em><a class="headerlink" href="#version-021-2018-03-26" title="Permanent link">&para;</a></h2>
+<h3 id="new_3">New<a class="headerlink" href="#new_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove unnecessary check from uploadArchives task (#149)</li>
+<li>Add a RELEASING.md to outline misk release process (#150)</li>
+<li>Move chat into its own example project. (#146)</li>
+<li>Introduce event router api (#147)</li>
+<li>Add basic frontend for exemplarchat</li>
+<li>Add MoshiJsonAdapters and SocketEventJsonAdapter (#151)</li>
+<li>Expose client certificates as action scoped vars (#141)</li>
+<li>Add ClusterMapper interface, refactor RealEventRouter to event loop (#155)</li>
+<li>Handle cluster changes (#156)</li>
+<li>More tests to exercise EventRouter behaviors. (#158)</li>
+<li>Support loading keystores from combined private key and certificate chain PEM files (#157)</li>
+</ul>
+<h3 id="fix_3">Fix<a class="headerlink" href="#fix_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix event router tests (#159)</li>
+</ul>
+<h2 id="version-020-2018-03-13">Version 0.2.0 <em>(2018-03-13)</em><a class="headerlink" href="#version-020-2018-03-13" title="Permanent link">&para;</a></h2>
+<h3 id="new_4">New<a class="headerlink" href="#new_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add _status action</li>
+<li>Split Interceptor into NetworkInterceptor and ApplicationInterceptor</li>
+<li>Introduce websocket support in misk</li>
+<li>Add tracing interceptor for web actions</li>
+<li>Add ActionExceptionLogLevelConfig to control log levels for ActionExceptions</li>
+<li>Allow binding an ExceptionMapper by an Exception type</li>
+<li>Google Cloud Datastore and Cloud Storage support</li>
+<li>Add backend for Zipkin tracer</li>
+<li>Add MiskTracer to facilitate ad-hoc method tracing</li>
+<li>Retrofit based typed client support (#112)</li>
+<li>Enable SSL for both clients and servers (#111)</li>
+<li>Support application/x-www-form-urlencoded parameters (#97)</li>
+<li>Add API for injecting dynamically sourced flags</li>
+<li>Add metrics backend for SignalFx</li>
+<li>Add support for commands</li>
+<li>Upgrade to Gradle 4.5 to support Java 9; add Java 9 to test matrix</li>
+<li>Allow customized exception mappings</li>
+<li>Add support for query strings in urls</li>
+</ul>
+<h3 id="fix_4">Fix<a class="headerlink" href="#fix_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Eliminate redundant _config suffix in config files</li>
+<li>Support Web actions that return Nothing</li>
+<li>Use proper snake-casing for default property names</li>
+<li>Fix Java path param dispatching</li>
+<li>Fix NotFoundAction handling (#134)</li>
+<li>Fix wildcard based content routing</li>
+<li>Fix a bug when a user-defined Interceptor returns a Response object</li>
+<li>Fix up Java translation from Moshi. (#107)</li>
+</ul>
+<h2 id="version-010-2018-02-01">Version 0.1.0 <em>(2018-02-01)</em><a class="headerlink" href="#version-010-2018-02-01" title="Permanent link">&para;</a></h2>
+<p>Initial release.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../0.x/misk-zookeeper/" title="misk-zookeeper" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                misk-zookeeper
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../releasing/" title="Releasing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Releasing
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Square, Inc.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
