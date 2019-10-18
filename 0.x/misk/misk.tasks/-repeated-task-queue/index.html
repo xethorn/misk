@@ -567,22 +567,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constructors" title="Constructors" class="md-nav__link">
-    Constructors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#functions" title="Functions" class="md-nav__link">
     Functions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#companion-object-functions" title="Companion Object Functions" class="md-nav__link">
-    Companion Object Functions
   </a>
   
 </li>
@@ -614,21 +600,6 @@ a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/DelayQu
 from the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/DelayQueue.html">DelayQueue</a> and hands it off to an executor service for execution.</p>
 <p><a href="./">RepeatedTaskQueue</a> implements the <a href="#">Service</a> interface, which requires proper startup and shutdown.
 Alternatively, you can add new instances to the <a href="#">Service</a> multibind.</p>
-<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-init-/">&lt;init&gt;</a></td>
-<td><code>RepeatedTaskQueue(name:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clock:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Clock.html"><code>Clock</code></a><code>, taskExecutor:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html"><code>ExecutorService</code></a><code>, config:</code><a href="../-repeated-task-queue-config/"><code>RepeatedTaskQueueConfig</code></a><code>= RepeatedTaskQueueConfig())</code><br>Creates a <a href="./">RepeatedTaskQueue</a> backed by a real <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/DelayQueue.html">DelayQueue</a>, with tasks dequeued on the service background thread and executed via the provided <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html">ExecutorService</a></td>
-</tr>
-</tbody>
-</table>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -665,21 +636,6 @@ Alternatively, you can add new instances to the <a href="#">Service</a> multibin
 <tr>
 <td><a href="trigger-shutdown/">triggerShutdown</a></td>
 <td><code>fun triggerShutdown():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
-</tr>
-</tbody>
-</table>
-<h3 id="companion-object-functions">Companion Object Functions<a class="headerlink" href="#companion-object-functions" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="for-testing/">forTesting</a></td>
-<td><code>fun forTesting(name:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clock:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Clock.html"><code>Clock</code></a><code>, backingStorage:</code><a href="../../misk.concurrent/-explicit-release-delay-queue/"><code>ExplicitReleaseDelayQueue</code></a><code>&lt;</code><a href="../-delayed-task/"><code>DelayedTask</code></a><code>&gt;):</code><a href="./"><code>RepeatedTaskQueue</code></a><br>Creates a <a href="./">RepeatedTaskQueue</a> backed by an <a href="../../misk.concurrent/-explicit-release-delay-queue/">ExplicitReleaseDelayQueue</a>, allowing tests to explicitly control when tasks are released for execution. Tasks are executed in a single thread in the order in which they expire</td>
 </tr>
 </tbody>
 </table>

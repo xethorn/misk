@@ -632,8 +632,12 @@
 <td><code>class RebalancingInterceptor :</code><a href="../misk.web/-network-interceptor/"><code>NetworkInterceptor</code></a><br>When we&rsquo;re deploying and redeploying our pods, we want to make sure that clients rebalance onto the new pods. This randomly closes connections so they will be recreated, naturally balancing connections across pods.</td>
 </tr>
 <tr>
+<td><a href="-request-body-logging-interceptor/">RequestBodyLoggingInterceptor</a></td>
+<td><code>class RequestBodyLoggingInterceptor :</code><a href="../misk/-application-interceptor/"><code>ApplicationInterceptor</code></a><br>Logs request and response information for an action. Timing information doesn&rsquo;t count time writing the response to the remote client.</td>
+</tr>
+<tr>
 <td><a href="-request-logging-interceptor/">RequestLoggingInterceptor</a></td>
-<td><code>class RequestLoggingInterceptor :</code><a href="../misk/-application-interceptor/"><code>ApplicationInterceptor</code></a><br>Logs request and response information for an action. Timing information doesn&rsquo;t count time writing the response to the remote client.</td>
+<td><code>class RequestLoggingInterceptor :</code><a href="../misk.web/-network-interceptor/"><code>NetworkInterceptor</code></a><br>Logs request and response information for an action. Timing information doesn&rsquo;t count time writing the response to the remote client.</td>
 </tr>
 <tr>
 <td><a href="-response-body-marshaller-factory/">ResponseBodyMarshallerFactory</a></td>

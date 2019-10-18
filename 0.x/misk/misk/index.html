@@ -560,16 +560,34 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#package-misk" title="Package misk" class="md-nav__link">
+    Package misk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#types" title="Types" class="md-nav__link">
     Types
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensions-for-external-classes" title="Extensions for External Classes" class="md-nav__link">
+    Extensions for External Classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -591,6 +609,8 @@
                 
                   <a href="https://github.com/cashapp/misk/edit/master/docs/0.x/misk/misk/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
+                
+                  <h1>Home</h1>
                 
                 <p><a href="../">misk</a> / <a href="./">misk</a></p>
 <h2 id="package-misk">Package misk<a class="headerlink" href="#package-misk" title="Permanent link">&para;</a></h2>
@@ -635,18 +655,8 @@
 <td><a href="-misk-real-service-module/">MiskRealServiceModule</a></td>
 <td><code>class MiskRealServiceModule : KAbstractModule</code><br>Install this module in real environments.</td>
 </tr>
-<tr>
-<td><a href="-service-graph-builder/">ServiceGraphBuilder</a></td>
-<td><code>class ServiceGraphBuilder</code><br>Builds a graph of <a href="#">CoordinatedService</a>s which defer start up and shut down until their dependent services are ready.</td>
-</tr>
-<tr>
-<td><a href="-service-module/">ServiceModule</a></td>
-<td><code>class ServiceModule : KAbstractModule</code></td>
-</tr>
 </tbody>
 </table>
-<h1 id="misk-services">Misk Services<a class="headerlink" href="#misk-services" title="Permanent link">&para;</a></h1>
-<p>|</p>
 <h3 id="extensions-for-external-classes">Extensions for External Classes<a class="headerlink" href="#extensions-for-external-classes" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -659,21 +669,6 @@
 <tr>
 <td><a href="kotlin.reflect.-k-function/">kotlin.reflect.KFunction</a></td>
 <td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-service-module/">ServiceModule</a></td>
-<td><code>fun &lt;T : Service&gt; ServiceModule(qualifier:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><code>KClass</code></a><code>&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><code>Annotation</code></a><code>&gt;? = null):</code><a href="-service-module/"><code>ServiceModule</code></a><br>Returns a <a href="-service-module/">ServiceModule</a> and hooks up service dependencies and enhancements.</td>
 </tr>
 </tbody>
 </table>

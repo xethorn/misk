@@ -594,13 +594,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extensions-for-external-classes" title="Extensions for External Classes" class="md-nav__link">
-    Extensions for External Classes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#functions" title="Functions" class="md-nav__link">
     Functions
   </a>
@@ -673,6 +666,10 @@
 <td><code>interface DbUnsharded&lt;T :</code><a href="-db-unsharded/"><code>DbUnsharded</code></a><code>&lt;</code><a href="-db-unsharded/#T"><code>T</code></a><code>&gt;&gt; :</code><a href="-db-entity/"><code>DbEntity</code></a><code>&lt;</code><a href="-db-unsharded/#T"><code>T</code></a><code>&gt;</code><br>Marker interface for persistent entities that have a bounded growth and do not require sharding.</td>
 </tr>
 <tr>
+<td><a href="-destination/">Destination</a></td>
+<td><code>data class Destination</code></td>
+</tr>
+<tr>
 <td><a href="-gid/">Gid</a></td>
 <td><code>data class Gid&lt;R :</code><a href="-db-root/"><code>DbRoot</code></a><code>&lt;</code><a href="-gid/#R"><code>R</code></a><code>&gt;, T :</code><a href="-db-sharded/"><code>DbSharded</code></a><code>&lt;</code><a href="-gid/#R"><code>R</code></a><code>,</code><a href="-gid/#T"><code>T</code></a><code>&gt;&gt; :</code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html"><code>Serializable</code></a><br>Entity group id, maps to two long columns one for the root id and one for the row</td>
 </tr>
@@ -731,6 +728,10 @@
 <tr>
 <td><a href="-shard/">Shard</a></td>
 <td><code>data class Shard</code></td>
+</tr>
+<tr>
+<td><a href="-tablet-type/">TabletType</a></td>
+<td><code>enum class TabletType</code></td>
 </tr>
 <tr>
 <td><a href="-transacter/">Transacter</a></td>
@@ -808,21 +809,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="extensions-for-external-classes">Extensions for External Classes<a class="headerlink" href="#extensions-for-external-classes" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="java.sql.-connection/">java.sql.Connection</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -843,6 +829,14 @@
 <tr>
 <td><a href="check-valid-shard-identifier/">checkValidShardIdentifier</a></td>
 <td><code>fun checkValidShardIdentifier(identifier:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td><a href="fail-safe-read/">failSafeRead</a></td>
+<td><code>fun &lt;T&gt;</code><a href="-transacter/"><code>Transacter</code></a><code>.failSafeRead(block: (session:</code><a href="-session/"><code>Session</code></a><code>) -&gt;</code><a href="fail-safe-read/#T"><code>T</code></a><code>):</code><a href="fail-safe-read/#T"><code>T</code></a><br>Runs a read on master first then tries it on replicas on failure. This method is here only for health check purpose for standby regions.<code>fun &lt;T&gt;</code><a href="-transacter/"><code>Transacter</code></a><code>.failSafeRead(shard:</code><a href="-shard/"><code>Shard</code></a><code>, block: (session:</code><a href="-session/"><code>Session</code></a><code>) -&gt;</code><a href="fail-safe-read/#T"><code>T</code></a><code>):</code><a href="fail-safe-read/#T"><code>T</code></a></td>
+</tr>
+<tr>
+<td><a href="get-roo-cause/">getRooCause</a></td>
+<td><code>fun getRooCause(throwable:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><code>Throwable</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><code>Throwable</code></a></td>
 </tr>
 <tr>
 <td><a href="load/">load</a></td>
@@ -867,6 +861,10 @@
 <tr>
 <td><a href="shards/">shards</a></td>
 <td><code>fun</code><a href="-session/"><code>Session</code></a><code>.shards(keyspace:</code><a href="-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards(keyspace:</code><a href="-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code></td>
+</tr>
+<tr>
+<td><a href="tablet-does-not-exists/">tabletDoesNotExists</a></td>
+<td><code>fun tabletDoesNotExists(e:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><code>Exception</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a></td>
 </tr>
 <tr>
 <td><a href="transaction/">transaction</a></td>

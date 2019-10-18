@@ -580,6 +580,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#companion-object-properties" title="Companion Object Properties" class="md-nav__link">
+    Companion Object Properties
+  </a>
+  
+</li>
+      
       
       
       
@@ -615,51 +622,7 @@ both plaintext and TLS.</p>
 <tbody>
 <tr>
 <td><a href="-init-/">&lt;init&gt;</a></td>
-<td>`WebTestingModule(webConfig: WebConfig = WebConfig(</td>
-</tr>
-<tr>
-<td>port = 0,</td>
-<td></td>
-</tr>
-<tr>
-<td>idle_timeout = 500000,</td>
-<td></td>
-</tr>
-<tr>
-<td>host = &ldquo;127.0.0.1&rdquo;,</td>
-<td></td>
-</tr>
-<tr>
-<td>ssl = WebSslConfig(</td>
-<td></td>
-</tr>
-<tr>
-<td>port = 0,</td>
-<td></td>
-</tr>
-<tr>
-<td>cert_store = CertStoreConfig(</td>
-<td></td>
-</tr>
-<tr>
-<td>resource = &ldquo;classpath:/ssl/server_cert_key_combo.pem&rdquo;,</td>
-<td></td>
-</tr>
-<tr>
-<td>passphrase = &ldquo;serverpassword&rdquo;,</td>
-<td></td>
-</tr>
-<tr>
-<td>format = SslLoader.FORMAT_PEM</td>
-<td></td>
-</tr>
-<tr>
-<td>),</td>
-<td></td>
-</tr>
-<tr>
-<td>mutual_auth = WebSslConfig.MutualAuth.NONE)))`<br>A module that starts an embedded Jetty web server configured for testing. The server supports both plaintext and TLS.</td>
-<td></td>
+<td><code>WebTestingModule(webConfig: WebConfig = TESTING_WEB_CONFIG)</code><br>A module that starts an embedded Jetty web server configured for testing. The server supports both plaintext and TLS.</td>
 </tr>
 </tbody>
 </table>
@@ -675,6 +638,21 @@ both plaintext and TLS.</p>
 <tr>
 <td><a href="configure/">configure</a></td>
 <td><code>fun configure():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="companion-object-properties">Companion Object Properties<a class="headerlink" href="#companion-object-properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-t-e-s-t-i-n-g_-w-e-b_-c-o-n-f-i-g/">TESTING_WEB_CONFIG</a></td>
+<td><code>val TESTING_WEB_CONFIG: WebConfig</code></td>
 </tr>
 </tbody>
 </table>

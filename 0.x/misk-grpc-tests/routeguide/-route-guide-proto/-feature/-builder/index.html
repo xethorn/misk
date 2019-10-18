@@ -635,11 +635,11 @@
 </tbody>
 </table>
 <p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
 | [clearName](clear-name.md) | `fun clearName(): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The name of the feature. <br><code>``
-&lt;br&gt;</code>string name = 1;<code>|
+&lt;br&gt;</code>optional string name = 1;<code>|
 | [clearOneof](clear-oneof.md) |</code>fun clearOneof(oneof: OneofDescriptor): <code>[</code>Builder<code>](./index.md) |
 | [clone](clone.md) |</code>fun clone(): <code>[</code>Builder<code>](./index.md) |
 | [getDefaultInstanceForType](get-default-instance-for-type.md) |</code>fun getDefaultInstanceForType(): <code>[</code>Feature<code>](../index.md) |
@@ -647,45 +647,48 @@
 | [getDescriptorForType](get-descriptor-for-type.md) |</code>fun getDescriptorForType(): Descriptor<code>|
 | [getLocation](get-location.md) |</code>fun getLocation(): <code>[</code>Point`](../../-point/index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
 | [getLocationBuilder](get-location-builder.md) | `fun getLocationBuilder(): `[`Builder`](../../-point/-builder/index.md)&lt;br&gt;
 </pre></div>
  The point where the feature is detected. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 2;<code>|
+&lt;br&gt;</code>optional .routeguide.Point location = 2;<code>|
 | [getLocationOrBuilder](get-location-or-builder.md) |</code>fun getLocationOrBuilder(): <code>[</code>PointOrBuilder`](../../-point-or-builder/index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
 | [getName](get-name.md) | `fun getName(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)&lt;br&gt;
 </pre></div>
  The name of the feature. <br><code>``
-&lt;br&gt;</code>string name = 1;<code>|
+&lt;br&gt;</code>optional string name = 1;<code>|
 | [getNameBytes](get-name-bytes.md) |</code>fun getNameBytes(): ByteString`<br></p>
 <p><div class="codehilite"><pre><span></span> The name of the feature. &lt;br&gt;```
-&lt;br&gt; `string name = 1;` |
+&lt;br&gt; `optional string name = 1;` |
 | [hasLocation](has-location.md) | `fun hasLocation(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
 </pre></div>
  The point where the feature is detected. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 2;<code>|
-| [isInitialized](is-initialized.md) |</code>fun isInitialized(): <code>[</code>Boolean<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [mergeFrom](merge-from.md) |</code>fun mergeFrom(other: Message): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(other: <code>[</code>Feature<code>](../index.md)</code>): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): <code>[</code>Builder<code>](./index.md) |
-| [mergeLocation](merge-location.md) |</code>fun mergeLocation(value: <code>[</code>Point<code>](../../-point/index.md)</code>): <code>[</code>Builder`](./index.md)<br></p>
-<p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
-| [mergeUnknownFields](merge-unknown-fields.md) | `fun mergeUnknownFields(unknownFields: UnknownFieldSet): `[`Builder`](./index.md) |
-| [setField](set-field.md) | `fun setField(field: FieldDescriptor, value: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`): `[`Builder`](./index.md) |
-| [setLocation](set-location.md) | `fun setLocation(value: `[`Point`](../../-point/index.md)`): `[`Builder`](./index.md)&lt;br&gt;`fun setLocation(builderForValue: `[`Builder`](../../-point/-builder/index.md)`): `[`Builder`](./index.md)&lt;br&gt;
+&lt;br&gt;</code>optional .routeguide.Point location = 2;<code>|
+| [hasName](has-name.md) |</code>fun hasName(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The name of the feature. &lt;br&gt;```
+&lt;br&gt; `optional string name = 1;` |
+| [isInitialized](is-initialized.md) | `fun isInitialized(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [mergeFrom](merge-from.md) | `fun mergeFrom(other: Message): `[`Builder`](./index.md)&lt;br&gt;`fun mergeFrom(other: `[`Feature`](../index.md)`): `[`Builder`](./index.md)&lt;br&gt;`fun mergeFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): `[`Builder`](./index.md) |
+| [mergeLocation](merge-location.md) | `fun mergeLocation(value: `[`Point`](../../-point/index.md)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The point where the feature is detected. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 2;<code>|
-| [setName](set-name.md) |</code>fun setName(value: <code>[</code>String<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)</code>): <code>[</code>Builder`](./index.md)<br></p>
-<p><div class="codehilite"><pre><span></span> The name of the feature. &lt;br&gt;```
-&lt;br&gt; `string name = 1;` |
-| [setNameBytes](set-name-bytes.md) | `fun setNameBytes(value: ByteString): `[`Builder`](./index.md)&lt;br&gt;
+&lt;br&gt;</code>optional .routeguide.Point location = 2;<code>|
+| [mergeUnknownFields](merge-unknown-fields.md) |</code>fun mergeUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder<code>](./index.md) |
+| [setField](set-field.md) |</code>fun setField(field: FieldDescriptor, value: <code>[</code>Any<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)</code>): <code>[</code>Builder<code>](./index.md) |
+| [setLocation](set-location.md) |</code>fun setLocation(value: <code>[</code>Point<code>](../../-point/index.md)</code>): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun setLocation(builderForValue: <code>[</code>Builder<code>](../../-point/-builder/index.md)</code>): <code>[</code>Builder`](./index.md)<br></p>
+<p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
+| [setName](set-name.md) | `fun setName(value: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The name of the feature. <br><code>``
-&lt;br&gt;</code>string name = 1;<code>|
-| [setRepeatedField](set-repeated-field.md) |</code>fun setRepeatedField(field: FieldDescriptor, index: <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)</code>, value: <code>[</code>Any<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)</code>): <code>[</code>Builder<code>](./index.md) |
-| [setUnknownFields](set-unknown-fields.md) |</code>fun setUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder`](./index.md) |</p>
+&lt;br&gt;</code>optional string name = 1;<code>|
+| [setNameBytes](set-name-bytes.md) |</code>fun setNameBytes(value: ByteString): <code>[</code>Builder`](./index.md)<br></p>
+<p><code>The name of the feature. &lt;br&gt;</code>
+<br> <code>optional string name = 1;</code> |
+| <a href="set-repeated-field/">setRepeatedField</a> | <code>fun setRepeatedField(field: FieldDescriptor, index:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, value:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>):</code><a href="./"><code>Builder</code></a> |
+| <a href="set-unknown-fields/">setUnknownFields</a> | <code>fun setUnknownFields(unknownFields: UnknownFieldSet):</code><a href="./"><code>Builder</code></a> |</p>
                 
                   
                 

@@ -637,20 +637,34 @@
 | [getDistance](get-distance.md) | `fun getDistance(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The distance covered in metres. <br><code>``
-&lt;br&gt;</code>int32 distance = 3;<code>|
+&lt;br&gt;</code>optional int32 distance = 3;<code>|
 | [getElapsedTime](get-elapsed-time.md) |</code>fun getElapsedTime(): <code>[</code>Int`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The duration of the traversal in seconds. &lt;br&gt;```
-&lt;br&gt; `int32 elapsed_time = 4;` |
+&lt;br&gt; `optional int32 elapsed_time = 4;` |
 | [getFeatureCount](get-feature-count.md) | `fun getFeatureCount(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The number of known features passed while traversing the route. <br><code>``
-&lt;br&gt;</code>int32 feature_count = 2;<code>|
+&lt;br&gt;</code>optional int32 feature_count = 2;<code>|
 | [getParserForType](get-parser-for-type.md) |</code>fun getParserForType(): Parser&lt;<code>[</code>RouteSummary<code>](./index.md)</code>&gt;<code>|
 | [getPointCount](get-point-count.md) |</code>fun getPointCount(): <code>[</code>Int`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The number of points received. &lt;br&gt;```
+&lt;br&gt; `optional int32 point_count = 1;` |
+| [getSerializedSize](get-serialized-size.md) | `fun getSerializedSize(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [getUnknownFields](get-unknown-fields.md) | `fun getUnknownFields(): UnknownFieldSet` |
+| [hasDistance](has-distance.md) | `fun hasDistance(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The distance covered in metres. <br><code>``
+&lt;br&gt;</code>optional int32 distance = 3;<code>|
+| [hasElapsedTime](has-elapsed-time.md) |</code>fun hasElapsedTime(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The duration of the traversal in seconds. &lt;br&gt;```
+&lt;br&gt; `optional int32 elapsed_time = 4;` |
+| [hasFeatureCount](has-feature-count.md) | `fun hasFeatureCount(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The number of known features passed while traversing the route. <br><code>``
+&lt;br&gt;</code>optional int32 feature_count = 2;<code>|
+| [hasPointCount](has-point-count.md) |</code>fun hasPointCount(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
 <p><code>The number of points received. &lt;br&gt;</code>
-<br> <code>int32 point_count = 1;</code> |
-| <a href="get-serialized-size/">getSerializedSize</a> | <code>fun getSerializedSize():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a> |
-| <a href="get-unknown-fields/">getUnknownFields</a> | <code>fun getUnknownFields(): UnknownFieldSet</code> |
+<br> <code>optional int32 point_count = 1;</code> |
 | <a href="hash-code/">hashCode</a> | <code>fun hashCode():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a> |
 | <a href="is-initialized/">isInitialized</a> | <code>fun isInitialized():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a> |
 | <a href="new-builder/">newBuilder</a> | <code>static fun newBuilder():</code><a href="-builder/"><code>Builder</code></a><br><code>static fun newBuilder(prototype:</code><a href="./"><code>RouteSummary</code></a><code>):</code><a href="-builder/"><code>Builder</code></a> |

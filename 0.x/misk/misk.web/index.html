@@ -638,14 +638,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="-dashboard-tab/">DashboardTab</a></td>
-<td><code>class DashboardTab :</code><a href="-web-tab/"><code>WebTab</code></a></td>
-</tr>
-<tr>
-<td><a href="-dashboard-tab-provider/">DashboardTabProvider</a></td>
-<td><code>class DashboardTabProvider : Provider&lt;</code><a href="-dashboard-tab/"><code>DashboardTab</code></a><code>&gt;</code><br>Sets the tab&rsquo;s authentication based on the injected AdminDashboardAccess access annotation entry</td>
-</tr>
-<tr>
 <td><a href="-dispatch-mechanism/">DispatchMechanism</a></td>
 <td><code>enum class DispatchMechanism</code><br>Describes how an action is processed. This is like the HTTP method but has special cases for web sockets and gRPC. These protocols layer on top of HTTP methods and have different semantics.</td>
 </tr>
@@ -682,10 +674,6 @@
 <td><code>interface ResponseBody</code></td>
 </tr>
 <tr>
-<td><a href="-valid-web-entry/">ValidWebEntry</a></td>
-<td><code>abstract class ValidWebEntry</code></td>
-</tr>
-<tr>
 <td><a href="-web-action-module/">WebActionModule</a></td>
 <td><code>class WebActionModule&lt;A :</code><a href="../misk.web.actions/-web-action/"><code>WebAction</code></a><code>&gt; : KAbstractModule</code></td>
 </tr>
@@ -696,10 +684,6 @@
 <tr>
 <td><a href="-web-ssl-config/">WebSslConfig</a></td>
 <td><code>data class WebSslConfig</code></td>
-</tr>
-<tr>
-<td><a href="-web-tab/">WebTab</a></td>
-<td><code>abstract class WebTab :</code><a href="-valid-web-entry/"><code>ValidWebEntry</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -786,10 +770,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="-dashboard-tab-provider/">DashboardTabProvider</a></td>
-<td><code>fun &lt;A :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><code>Annotation</code></a><code>&gt; DashboardTabProvider(slug:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, url_path_prefix:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, name:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, category:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>= "Admin"):</code><a href="-dashboard-tab-provider/"><code>DashboardTabProvider</code></a></td>
-</tr>
 <tr>
 <td><a href="read-utf8/">readUtf8</a></td>
 <td><code>fun</code><a href="-response/"><code>Response</code></a><code>&lt;*&gt;.readUtf8():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>

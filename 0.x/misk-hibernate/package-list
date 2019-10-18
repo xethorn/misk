@@ -1,6 +1,5 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
-$dokka.location:misk.hibernate$isVitess(java.sql.Connection)misk.hibernate/java.sql.-connection/is-vitess.md
 $dokka.location:misk.jdbc$map(java.sql.ResultSet, kotlin.Function1((java.sql.ResultSet, misk.jdbc.map.T)))misk.jdbc/java.sql.-result-set/map.md
 $dokka.location:misk.jdbc$maybeInt(java.sql.ResultSet)misk.jdbc/java.sql.-result-set/maybe-int.md
 $dokka.location:misk.jdbc$maybeLong(java.sql.ResultSet)misk.jdbc/java.sql.-result-set/maybe-long.md

@@ -80,6 +80,7 @@ misk.tokens
 misk.tracing
 misk.web
 misk.web.actions
+misk.web.dashboard
 misk.web.exceptions
 misk.web.formatter
 misk.web.interceptors

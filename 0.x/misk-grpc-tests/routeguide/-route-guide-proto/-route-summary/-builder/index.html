@@ -631,56 +631,70 @@
 </tbody>
 </table>
 <p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
-&lt;br&gt; `int32 distance = 3;` |
+&lt;br&gt; `optional int32 distance = 3;` |
 | [clearElapsedTime](clear-elapsed-time.md) | `fun clearElapsedTime(): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The duration of the traversal in seconds. <br><code>``
-&lt;br&gt;</code>int32 elapsed_time = 4;<code>|
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
 | [clearFeatureCount](clear-feature-count.md) |</code>fun clearFeatureCount(): <code>[</code>Builder`](./index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
-&lt;br&gt; `int32 feature_count = 2;` |
+&lt;br&gt; `optional int32 feature_count = 2;` |
 | [clearField](clear-field.md) | `fun clearField(field: FieldDescriptor): `[`Builder`](./index.md) |
 | [clearOneof](clear-oneof.md) | `fun clearOneof(oneof: OneofDescriptor): `[`Builder`](./index.md) |
 | [clearPointCount](clear-point-count.md) | `fun clearPointCount(): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The number of points received. <br><code>``
-&lt;br&gt;</code>int32 point_count = 1;<code>|
+&lt;br&gt;</code>optional int32 point_count = 1;<code>|
 | [clone](clone.md) |</code>fun clone(): <code>[</code>Builder<code>](./index.md) |
 | [getDefaultInstanceForType](get-default-instance-for-type.md) |</code>fun getDefaultInstanceForType(): <code>[</code>RouteSummary<code>](../index.md) |
 | [getDescriptor](get-descriptor.md) |</code>static fun getDescriptor(): Descriptor<code>|
 | [getDescriptorForType](get-descriptor-for-type.md) |</code>fun getDescriptorForType(): Descriptor<code>|
 | [getDistance](get-distance.md) |</code>fun getDistance(): <code>[</code>Int`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
-&lt;br&gt; `int32 distance = 3;` |
+&lt;br&gt; `optional int32 distance = 3;` |
 | [getElapsedTime](get-elapsed-time.md) | `fun getElapsedTime(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The duration of the traversal in seconds. <br><code>``
-&lt;br&gt;</code>int32 elapsed_time = 4;<code>|
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
 | [getFeatureCount](get-feature-count.md) |</code>fun getFeatureCount(): <code>[</code>Int`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
-&lt;br&gt; `int32 feature_count = 2;` |
+&lt;br&gt; `optional int32 feature_count = 2;` |
 | [getPointCount](get-point-count.md) | `fun getPointCount(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The number of points received. <br><code>``
-&lt;br&gt;</code>int32 point_count = 1;<code>|
+&lt;br&gt;</code>optional int32 point_count = 1;<code>|
+| [hasDistance](has-distance.md) |</code>fun hasDistance(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
+&lt;br&gt; `optional int32 distance = 3;` |
+| [hasElapsedTime](has-elapsed-time.md) | `fun hasElapsedTime(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The duration of the traversal in seconds. <br><code>``
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
+| [hasFeatureCount](has-feature-count.md) |</code>fun hasFeatureCount(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
+&lt;br&gt; `optional int32 feature_count = 2;` |
+| [hasPointCount](has-point-count.md) | `fun hasPointCount(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The number of points received. <br><code>``
+&lt;br&gt;</code>optional int32 point_count = 1;<code>|
 | [isInitialized](is-initialized.md) |</code>fun isInitialized(): <code>[</code>Boolean<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 | [mergeFrom](merge-from.md) |</code>fun mergeFrom(other: Message): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(other: <code>[</code>RouteSummary<code>](../index.md)</code>): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): <code>[</code>Builder<code>](./index.md) |
 | [mergeUnknownFields](merge-unknown-fields.md) |</code>fun mergeUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder<code>](./index.md) |
 | [setDistance](set-distance.md) |</code>fun setDistance(value: <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)</code>): <code>[</code>Builder`](./index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
-&lt;br&gt; `int32 distance = 3;` |
+&lt;br&gt; `optional int32 distance = 3;` |
 | [setElapsedTime](set-elapsed-time.md) | `fun setElapsedTime(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The duration of the traversal in seconds. <br><code>``
-&lt;br&gt;</code>int32 elapsed_time = 4;<code>|
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
 | [setFeatureCount](set-feature-count.md) |</code>fun setFeatureCount(value: <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)</code>): <code>[</code>Builder`](./index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
-&lt;br&gt; `int32 feature_count = 2;` |
+&lt;br&gt; `optional int32 feature_count = 2;` |
 | [setField](set-field.md) | `fun setField(field: FieldDescriptor, value: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`): `[`Builder`](./index.md) |
 | [setPointCount](set-point-count.md) | `fun setPointCount(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The number of points received. <br><code>``
-&lt;br&gt;</code>int32 point_count = 1;<code>|
+&lt;br&gt;</code>optional int32 point_count = 1;<code>|
 | [setRepeatedField](set-repeated-field.md) |</code>fun setRepeatedField(field: FieldDescriptor, index: <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)</code>, value: <code>[</code>Any<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)</code>): <code>[</code>Builder<code>](./index.md) |
 | [setUnknownFields](set-unknown-fields.md) |</code>fun setUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder`](./index.md) |</p>
                 

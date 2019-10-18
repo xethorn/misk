@@ -639,6 +639,10 @@
 <td><code>abstract fun allowCowrites():</code><a href="./"><code>Transacter</code></a><br>Disable cowrite checks for the duration of the session. Useful for quickly setting up test data in testing.</td>
 </tr>
 <tr>
+<td><a href="config/">config</a></td>
+<td><code>abstract fun config():</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a></td>
+</tr>
+<tr>
 <td><a href="is-check-enabled/">isCheckEnabled</a></td>
 <td><code>abstract fun isCheckEnabled(check:</code><a href="../-check/"><code>Check</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><br>Is the scalability check currently enabled. Use <a href="../-session/without-checks/">Session.withoutChecks</a> to disable checks.</td>
 </tr>
@@ -649,6 +653,10 @@
 <tr>
 <td><a href="read-only/">readOnly</a></td>
 <td><code>abstract fun readOnly():</code><a href="./"><code>Transacter</code></a><br>Creates a new transacter that produces read only sessions. This does not mean the underlying datasource is read only, only that the session produced won&rsquo;t modify the database.</td>
+</tr>
+<tr>
+<td><a href="replica-read/">replicaRead</a></td>
+<td><code>abstract fun &lt;T&gt; replicaRead(block: (session:</code><a href="../-session/"><code>Session</code></a><code>) -&gt;</code><a href="replica-read/#T"><code>T</code></a><code>):</code><a href="replica-read/#T"><code>T</code></a><br>Runs a non-transactional session against a read replica.</td>
 </tr>
 <tr>
 <td><a href="retries/">retries</a></td>
@@ -669,6 +677,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../fail-safe-read/">failSafeRead</a></td>
+<td><code>fun &lt;T&gt;</code><a href="./"><code>Transacter</code></a><code>.failSafeRead(block: (session:</code><a href="../-session/"><code>Session</code></a><code>) -&gt;</code><a href="../fail-safe-read/#T"><code>T</code></a><code>):</code><a href="../fail-safe-read/#T"><code>T</code></a><br>Runs a read on master first then tries it on replicas on failure. This method is here only for health check purpose for standby regions.<code>fun &lt;T&gt;</code><a href="./"><code>Transacter</code></a><code>.failSafeRead(shard:</code><a href="../-shard/"><code>Shard</code></a><code>, block: (session:</code><a href="../-session/"><code>Session</code></a><code>) -&gt;</code><a href="../fail-safe-read/#T"><code>T</code></a><code>):</code><a href="../fail-safe-read/#T"><code>T</code></a></td>
+</tr>
 <tr>
 <td><a href="../shards/">shards</a></td>
 <td><code>fun</code><a href="./"><code>Transacter</code></a><code>.shards():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="../-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="./"><code>Transacter</code></a><code>.shards(keyspace:</code><a href="../-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="../-shard/"><code>Shard</code></a><code>&gt;</code></td>

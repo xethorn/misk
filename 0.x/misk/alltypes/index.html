@@ -560,8 +560,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-types" title="All Types" class="md-nav__link">
+    All Types
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -575,6 +589,8 @@
                 
                   <a href="https://github.com/cashapp/misk/edit/master/docs/0.x/misk/alltypes/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
+                
+                  <h1>Home</h1>
                 
                 <h3 id="all-types">All Types<a class="headerlink" href="#all-types" title="Permanent link">&para;</a></h3>
 <table>
@@ -638,23 +654,19 @@
 <td>Provides an <a href="../misk.clustering.weights/-active-cluster-weight/">ActiveClusterWeight</a></td>
 </tr>
 <tr>
-<td><a href="../misk.web.metadata/-admin-dashboard-access/">misk.web.metadata.AdminDashboardAccess</a></td>
+<td><a href="../misk.web.dashboard/-admin-dashboard/">misk.web.dashboard.AdminDashboard</a></td>
+<td>Dashboard Annotation used for all tabs bound in the Misk Admin Dashboard</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-admin-dashboard-access/">misk.web.dashboard.AdminDashboardAccess</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.web.metadata/-admin-dashboard-module/">misk.web.metadata.AdminDashboardModule</a></td>
-<td>Installs default Admin Dashboard that runs at passed in url_path_prefix Each Misk included tab in dashboard is installed with the respective:</td>
+<td><a href="../misk.web.dashboard/-admin-dashboard-module/">misk.web.dashboard.AdminDashboardModule</a></td>
+<td>Installs default Admin Dashboard that runs at multibound DashboardHomeUrl</td>
 </tr>
 <tr>
-<td><a href="../misk.web.actions/-admin-dashboard-tab/">misk.web.actions.AdminDashboardTab</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../misk.web.actions/-admin-dashboard-tab-action/">misk.web.actions.AdminDashboardTabAction</a></td>
-<td>Returns list of all Admin Tabs visible to current calling authenticated user</td>
-</tr>
-<tr>
-<td><a href="../misk.web.metadata/-admin-dashboard-testing-module/">misk.web.metadata.AdminDashboardTestingModule</a></td>
+<td><a href="../misk.web.dashboard/-admin-dashboard-testing-module/">misk.web.dashboard.AdminDashboardTestingModule</a></td>
 <td></td>
 </tr>
 <tr>
@@ -794,7 +806,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.config/-config-metadata-action/">misk.config.ConfigMetadataAction</a></td>
+<td><a href="../misk.web.metadata/-config-metadata-action/">misk.web.metadata.ConfigMetadataAction</a></td>
 <td></td>
 </tr>
 <tr>
@@ -810,12 +822,32 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.web/-dashboard-tab/">misk.web.DashboardTab</a></td>
-<td></td>
+<td><a href="../misk.web.dashboard/-dashboard-home-url/">misk.web.dashboard.DashboardHomeUrl</a></td>
+<td>Url to link to for the home button in the dashboard navbar 1 <a href="../misk.web.dashboard/-dashboard-home-url/">DashboardHomeUrl</a> should be bound per dashboard</td>
 </tr>
 <tr>
-<td><a href="../misk.web/-dashboard-tab-provider/">misk.web.DashboardTabProvider</a></td>
-<td>Sets the tab&rsquo;s authentication based on the injected AdminDashboardAccess access annotation entry</td>
+<td><a href="../misk.web.metadata/-dashboard-metadata-action/">misk.web.metadata.DashboardMetadataAction</a></td>
+<td>Serve metadata related to a Misk-Web Dashboard</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-dashboard-module/">misk.web.dashboard.DashboardModule</a></td>
+<td>Support Misk-Web Dashboards including the Misk <a href="../misk.web.dashboard/-admin-dashboard/">AdminDashboard</a> and service specific front end apps</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-dashboard-navbar-item/">misk.web.dashboard.DashboardNavbarItem</a></td>
+<td>A list of elements to add to the dashboard navbar Misk-Web&rsquo;s default navbar handles responsive layout of these items so overflow navbar items are included in the drop down menu</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-dashboard-navbar-status/">misk.web.dashboard.DashboardNavbarStatus</a></td>
+<td>Banner text to show below the dashboard navbar 0 or 1 <a href="../misk.web.dashboard/-dashboard-navbar-status/">DashboardNavbarStatus</a> should be bound per dashboard</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-dashboard-tab/">misk.web.dashboard.DashboardTab</a></td>
+<td>A <a href="../misk.web.dashboard/-web-tab/">WebTab</a> with additional fields to bind to a specific Dashboard that has a tabs menu</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-dashboard-tab-provider/">misk.web.dashboard.DashboardTabProvider</a></td>
+<td>Sets the tab&rsquo;s authentication capabilities/services by the multibound <a href="../misk.security.authz/-access-annotation-entry/">AccessAnnotationEntry</a></td>
 </tr>
 <tr>
 <td><a href="../misk.tasks/-delayed-task/">misk.tasks.DelayedTask</a></td>
@@ -828,6 +860,10 @@
 <tr>
 <td><a href="../misk.web/-dispatch-mechanism/">misk.web.DispatchMechanism</a></td>
 <td>Describes how an action is processed. This is like the HTTP method but has special cases for web sockets and gRPC. These protocols layer on top of HTTP methods and have different semantics.</td>
+</tr>
+<tr>
+<td><a href="../misk.backoff/-dont-retry-exception/">misk.backoff.DontRetryException</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../misk.environment/-env-var-loader/">misk.environment.EnvVarLoader</a></td>
@@ -930,7 +966,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.web.actions/-field/">misk.web.actions.Field</a></td>
+<td><a href="../misk.web.metadata/-field/">misk.web.metadata.Field</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1234,7 +1270,7 @@
 <td>Base exception for when resources are not found</td>
 </tr>
 <tr>
-<td><a href="../misk.web.actions/-optional-binder/">misk.web.actions.OptionalBinder</a></td>
+<td><a href="../misk.web.metadata/-optional-binder/">misk.web.metadata.OptionalBinder</a></td>
 <td><a href="https://github.com/google/guice/wiki/FrequentlyAskedQuestions#how-can-i-inject-optional-parameters-into-a-constructor">https://github.com/google/guice/wiki/FrequentlyAskedQuestions#how-can-i-inject-optional-parameters-into-a-constructor</a></td>
 </tr>
 <tr>
@@ -1334,8 +1370,20 @@
 <td></td>
 </tr>
 <tr>
+<td><a href="../misk.tasks/-repeated-task-queue-factory/">misk.tasks.RepeatedTaskQueueFactory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.tasks/-repeated-task-queue-metrics/">misk.tasks.RepeatedTaskQueueMetrics</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../misk.web/-request-body/">misk.web.RequestBody</a></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.interceptors/-request-body-logging-interceptor/">misk.web.interceptors.RequestBodyLoggingInterceptor</a></td>
+<td>Logs request and response information for an action. Timing information doesn&rsquo;t count time writing the response to the remote client.</td>
 </tr>
 <tr>
 <td><a href="../misk.web/-request-content-type/">misk.web.RequestContentType</a></td>
@@ -1402,70 +1450,195 @@
 <td>Type for any secrets that need to be loaded as reference in their config file. Secret addresses should use format specified in <a href="../misk.resources/-resource-loader/">misk.resources.ResourceLoader</a>.</td>
 </tr>
 <tr>
-<td><a href="../misk/-service-graph-builder/">misk.ServiceGraphBuilder</a></td>
-<td>Builds a graph of <a href="#">CoordinatedService</a>s which defer start up and shut down until their dependent services are ready.</td>
-</tr>
-<tr>
-<td><a href="../misk.web.actions/-service-metadata/">misk.web.actions.ServiceMetadata</a></td>
+<td><a href="../misk.web.metadata/-service-metadata/">misk.web.metadata.ServiceMetadata</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.web.actions/-service-metadata-action/">misk.web.actions.ServiceMetadataAction</a></td>
-<td>metadata to build navbar of admin dashboard</td>
+<td><a href="../misk.web.metadata/-service-metadata-action/">misk.web.metadata.ServiceMetadataAction</a></td>
+<td>Service Metadata used for front end dashboards including App Name and Misk.Environment</td>
 </tr>
 <tr>
-<td><a href="../misk/-service-module/">misk.ServiceModule</a></td>
+<td><a href="../misk.concurrent/-sleeper/">misk.concurrent.Sleeper</a></td>
+<td>Abstraction for Thread.sleep() that allows for testing.</td>
+</tr>
+<tr>
+<td><a href="../misk.security.ssl/-ssl-context-factory/">misk.security.ssl.SslContextFactory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.security.ssl/-ssl-loader/">misk.security.ssl.SslLoader</a></td>
+<td>Loads keys and certificates from the file system.</td>
+</tr>
+<tr>
+<td><a href="../misk.web.resources/-static-resource-action/">misk.web.resources.StaticResourceAction</a></td>
+<td>StaticResourceAction This data class is used with Guice multibindings. Register instances by calling <code>multibind()</code> in a <code>KAbstractModule</code>:</td>
+</tr>
+<tr>
+<td><a href="../misk.web.resources/-static-resource-entry/">misk.web.resources.StaticResourceEntry</a></td>
+<td>This data class is used with Guice multibindings. Register instances by calling <code>multibind()</code> in a <code>KAbstractModule</code>:</td>
+</tr>
+<tr>
+<td><a href="../misk.tasks/-status/">misk.tasks.Status</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.actions/-status-action/">misk.web.actions.StatusAction</a></td>
+<td>Returns the current status of the service for programmatic tools that want to query for the current state of the server</td>
+</tr>
+<tr>
+<td><a href="../misk.exceptions/-status-code/">misk.exceptions.StatusCode</a></td>
+<td>Common status codes for actions</td>
+</tr>
+<tr>
+<td><a href="../misk.web/kotlin.-string/">kotlin.String</a> (extensions in package misk.web)</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.mediatype/kotlin.-string/">kotlin.String</a> (extensions in package misk.web.mediatype)</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.logging/-tag/">misk.logging.Tag</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.resources/-testing-resource-loader-module/">misk.resources.TestingResourceLoaderModule</a></td>
+<td>Can be used instead of <a href="../misk.resources/-resource-loader-module/">ResourceLoaderModule</a> in tests to load filesystem: resources using <a href="#">FakeFilesystemLoaderBackend</a></td>
+</tr>
+<tr>
+<td><a href="../misk.random/-thread-local-random/">misk.random.ThreadLocalRandom</a></td>
+<td>Abstraction for Java&rsquo;s ThreadLocalRandom that allows for testing.</td>
+</tr>
+<tr>
+<td><a href="../misk.security.ssl/-tls-protocols/">misk.security.ssl.TlsProtocols</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.tokens/-token-generator/">misk.tokens.TokenGenerator</a></td>
+<td>Generates an secure, unguessable, alphanumeric token for use as a universally unique ID. Tokens are encoded with a <a href="https//www.crockford.com/wrmg/base32.html">Crockford Base32 alphabet</a>. This alphabet contains a mix of lowercase characters and digits and is resistant to decoding errors; for example <code>0</code>, <code>o</code>, and &lsquo;O&rsquo; are equivalent.</td>
+</tr>
+<tr>
+<td><a href="../misk.exceptions/-too-many-requests-exception/">misk.exceptions.TooManyRequestsException</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.tracing/io.opentracing.-tracer/">io.opentracing.Tracer</a> (extensions in package misk.tracing)</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.security.ssl/-trust-store/">misk.security.ssl.TrustStore</a></td>
+<td>A set of trusted root certificates.</td>
+</tr>
+<tr>
+<td><a href="../misk.security.ssl/-trust-store-config/">misk.security.ssl.TrustStoreConfig</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.metadata/-type/">misk.web.metadata.Type</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.client/-typed-http-client-module/">misk.client.TypedHttpClientModule</a></td>
+<td>Creates a retrofit-backed typed client given an API interface and an HTTP configuration.</td>
+</tr>
+<tr>
+<td><a href="../misk.client/-typed-peer-client-factory/">misk.client.TypedPeerClientFactory</a></td>
+<td>Factory for creating typed clients that call other members of a cluster.</td>
+</tr>
+<tr>
+<td><a href="../misk.client/-typed-peer-http-client-module/">misk.client.TypedPeerHttpClientModule</a></td>
+<td>Creates a retrofit-backed typed client factory given an API interface and an HTTP configuration.</td>
+</tr>
+<tr>
+<td><a href="../misk.security.authz/-unauthenticated/">misk.security.authz.Unauthenticated</a></td>
+<td>Annotation indicating that a given action supports unauthenticated access</td>
+</tr>
+<tr>
+<td><a href="../misk.exceptions/-unauthenticated-exception/">misk.exceptions.UnauthenticatedException</a></td>
+<td>Base exception for when authentication fails</td>
+</tr>
+<tr>
+<td><a href="../misk.exceptions/-unauthorized-exception/">misk.exceptions.UnauthorizedException</a></td>
+<td>Base exception for when authenticated credentials lack access to a resource</td>
+</tr>
+<tr>
+<td><a href="../misk.client/-unix-domain-server-socket-factory/">misk.client.UnixDomainServerSocketFactory</a></td>
+<td>Impersonate TCP-style ServerSocketFactory over UNIX domain sockets.</td>
+</tr>
+<tr>
+<td><a href="../misk.client/-unix-domain-socket-factory/">misk.client.UnixDomainSocketFactory</a></td>
+<td>Impersonate TCP-style SocketFactory over UNIX domain sockets.</td>
+</tr>
+<tr>
+<td><a href="../misk.web.marshal/-unmarshaller/">misk.web.marshal.Unmarshaller</a></td>
+<td>Unmarshalls a typed object from an incoming source</td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-valid-web-entry/">misk.web.dashboard.ValidWebEntry</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.actions/-web-action/">misk.web.actions.WebAction</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.metadata/-web-action-metadata/">misk.web.metadata.WebActionMetadata</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.metadata/-web-action-metadata-action/">misk.web.metadata.WebActionMetadataAction</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web/-web-action-module/">misk.web.WebActionModule</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web/-web-config/">misk.web.WebConfig</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.proxy/-web-proxy-action/">misk.web.proxy.WebProxyAction</a></td>
+<td>WebProxyAction</td>
+</tr>
+<tr>
+<td><a href="../misk.web.proxy/-web-proxy-entry/">misk.web.proxy.WebProxyEntry</a></td>
+<td>Maps URLs requested against this server to URLs of servers to delegate to</td>
+</tr>
+<tr>
+<td><a href="../misk.web.actions/-web-socket/">misk.web.actions.WebSocket</a></td>
+<td>A non-blocking interface to a web socket.</td>
+</tr>
+<tr>
+<td><a href="../misk.web.actions/-web-socket-listener/">misk.web.actions.WebSocketListener</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web/-web-ssl-config/">misk.web.WebSslConfig</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-web-tab/">misk.web.dashboard.WebTab</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.web.dashboard/-web-tab-resource-module/">misk.web.dashboard.WebTabResourceModule</a></td>
+<td>Declare how to serve the resources for a <a href="../misk.web.dashboard/-web-tab/">WebTab</a> (JS, HTML, CSS&hellip;)</td>
+</tr>
+<tr>
+<td><a href="../misk.concurrent/-wrapping-listening-executor-service/">misk.concurrent.WrappingListeningExecutorService</a></td>
+<td><a href="#">ListeningExecutorService</a> which wraps all calls</td>
+</tr>
+<tr>
+<td><a href="../misk.security.cert/-x500-name/">misk.security.cert.X500Name</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.security.cert/java.security.cert.-x509-certificate/">java.security.cert.X509Certificate</a> (extensions in package misk.security.cert)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h1 id="misk-services">Misk Services<a class="headerlink" href="#misk-services" title="Permanent link">&para;</a></h1>
-<p>|
-| <a href="../misk.concurrent/-sleeper/">misk.concurrent.Sleeper</a> | Abstraction for Thread.sleep() that allows for testing. |
-| <a href="../misk.security.ssl/-ssl-context-factory/">misk.security.ssl.SslContextFactory</a> |  |
-| <a href="../misk.security.ssl/-ssl-loader/">misk.security.ssl.SslLoader</a> | Loads keys and certificates from the file system. |
-| <a href="../misk.web.resources/-static-resource-action/">misk.web.resources.StaticResourceAction</a> | StaticResourceAction This data class is used with Guice multibindings. Register instances by calling <code>multibind()</code> in a <code>KAbstractModule</code>: |
-| <a href="../misk.web.resources/-static-resource-entry/">misk.web.resources.StaticResourceEntry</a> | This data class is used with Guice multibindings. Register instances by calling <code>multibind()</code> in a <code>KAbstractModule</code>: |
-| <a href="../misk.tasks/-status/">misk.tasks.Status</a> |  |
-| <a href="../misk.web.actions/-status-action/">misk.web.actions.StatusAction</a> | Returns the current status of the service for programmatic tools that want to query for the current state of the server |
-| <a href="../misk.exceptions/-status-code/">misk.exceptions.StatusCode</a> | Common status codes for actions |
-| <a href="../misk.web/kotlin.-string/">kotlin.String</a> (extensions in package misk.web) |  |
-| <a href="../misk.web.mediatype/kotlin.-string/">kotlin.String</a> (extensions in package misk.web.mediatype) |  |
-| <a href="../misk.logging/-tag/">misk.logging.Tag</a> |  |
-| <a href="../misk.resources/-testing-resource-loader-module/">misk.resources.TestingResourceLoaderModule</a> | Can be used instead of <a href="../misk.resources/-resource-loader-module/">ResourceLoaderModule</a> in tests to load filesystem: resources using <a href="#">FakeFilesystemLoaderBackend</a> |
-| <a href="../misk.random/-thread-local-random/">misk.random.ThreadLocalRandom</a> | Abstraction for Java&rsquo;s ThreadLocalRandom that allows for testing. |
-| <a href="../misk.security.ssl/-tls-protocols/">misk.security.ssl.TlsProtocols</a> |  |
-| <a href="../misk.tokens/-token-generator/">misk.tokens.TokenGenerator</a> | Generates an secure, unguessable, alphanumeric token for use as a universally unique ID. Tokens are encoded with a <a href="https//www.crockford.com/wrmg/base32.html">Crockford Base32 alphabet</a>. This alphabet contains a mix of lowercase characters and digits and is resistant to decoding errors; for example <code>0</code>, <code>o</code>, and &lsquo;O&rsquo; are equivalent. |
-| <a href="../misk.exceptions/-too-many-requests-exception/">misk.exceptions.TooManyRequestsException</a> |  |
-| <a href="../misk.tracing/io.opentracing.-tracer/">io.opentracing.Tracer</a> (extensions in package misk.tracing) |  |
-| <a href="../misk.security.ssl/-trust-store/">misk.security.ssl.TrustStore</a> | A set of trusted root certificates. |
-| <a href="../misk.security.ssl/-trust-store-config/">misk.security.ssl.TrustStoreConfig</a> |  |
-| <a href="../misk.web.actions/-type/">misk.web.actions.Type</a> |  |
-| <a href="../misk.client/-typed-http-client-module/">misk.client.TypedHttpClientModule</a> | Creates a retrofit-backed typed client given an API interface and an HTTP configuration. |
-| <a href="../misk.client/-typed-peer-client-factory/">misk.client.TypedPeerClientFactory</a> | Factory for creating typed clients that call other members of a cluster. |
-| <a href="../misk.client/-typed-peer-http-client-module/">misk.client.TypedPeerHttpClientModule</a> | Creates a retrofit-backed typed client factory given an API interface and an HTTP configuration. |
-| <a href="../misk.security.authz/-unauthenticated/">misk.security.authz.Unauthenticated</a> | Annotation indicating that a given action supports unauthenticated access |
-| <a href="../misk.exceptions/-unauthenticated-exception/">misk.exceptions.UnauthenticatedException</a> | Base exception for when authentication fails |
-| <a href="../misk.exceptions/-unauthorized-exception/">misk.exceptions.UnauthorizedException</a> | Base exception for when authenticated credentials lack access to a resource |
-| <a href="../misk.client/-unix-domain-server-socket-factory/">misk.client.UnixDomainServerSocketFactory</a> | Impersonate TCP-style ServerSocketFactory over UNIX domain sockets. |
-| <a href="../misk.client/-unix-domain-socket-factory/">misk.client.UnixDomainSocketFactory</a> | Impersonate TCP-style SocketFactory over UNIX domain sockets. |
-| <a href="../misk.web.marshal/-unmarshaller/">misk.web.marshal.Unmarshaller</a> | Unmarshalls a typed object from an incoming source |
-| <a href="../misk.web/-valid-web-entry/">misk.web.ValidWebEntry</a> |  |
-| <a href="../misk.web.actions/-web-action/">misk.web.actions.WebAction</a> |  |
-| <a href="../misk.web.actions/-web-action-metadata/">misk.web.actions.WebActionMetadata</a> |  |
-| <a href="../misk.web.actions/-web-action-metadata-action/">misk.web.actions.WebActionMetadataAction</a> |  |
-| <a href="../misk.web/-web-action-module/">misk.web.WebActionModule</a> |  |
-| <a href="../misk.web/-web-config/">misk.web.WebConfig</a> |  |
-| <a href="../misk.web.proxy/-web-proxy-action/">misk.web.proxy.WebProxyAction</a> | WebProxyAction |
-| <a href="../misk.web.proxy/-web-proxy-entry/">misk.web.proxy.WebProxyEntry</a> | WebProxyEntry |
-| <a href="../misk.web.actions/-web-socket/">misk.web.actions.WebSocket</a> | A non-blocking interface to a web socket. |
-| <a href="../misk.web.actions/-web-socket-listener/">misk.web.actions.WebSocketListener</a> |  |
-| <a href="../misk.web/-web-ssl-config/">misk.web.WebSslConfig</a> |  |
-| <a href="../misk.web/-web-tab/">misk.web.WebTab</a> |  |
-| <a href="../misk.web.metadata/-web-tab-resource-module/">misk.web.metadata.WebTabResourceModule</a> |  |
-| <a href="../misk.concurrent/-wrapping-listening-executor-service/">misk.concurrent.WrappingListeningExecutorService</a> | <a href="#">ListeningExecutorService</a> which wraps all calls |
-| <a href="../misk.security.cert/-x500-name/">misk.security.cert.X500Name</a> |  |
-| <a href="../misk.security.cert/java.security.cert.-x509-certificate/">java.security.cert.X509Certificate</a> (extensions in package misk.security.cert) |  |</p>
                 
                   
                 

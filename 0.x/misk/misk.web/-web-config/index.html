@@ -613,7 +613,7 @@
 <tbody>
 <tr>
 <td><a href="-init-/">&lt;init&gt;</a></td>
-<td><code>WebConfig(port:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, idle_timeout:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><code>, host:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>? = null, ssl:</code><a href="../-web-ssl-config/"><code>WebSslConfig</code></a><code>? = null, selectors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, acceptors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, queue_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, jetty_max_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, action_exception_log_level:</code><a href="../../misk.web.exceptions/-action-exception-log-level-config/"><code>ActionExceptionLogLevelConfig</code></a><code>= ActionExceptionLogLevelConfig(), jetty_max_concurrent_streams:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, close_connection_percent:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><code>Double</code></a><code>= 0.0)</code></td>
+<td><code>WebConfig(port:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, idle_timeout:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><code>, host:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>? = null, ssl:</code><a href="../-web-ssl-config/"><code>WebSslConfig</code></a><code>? = null, http2:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><code>= false, selectors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, acceptors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, queue_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, jetty_max_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, action_exception_log_level:</code><a href="../../misk.web.exceptions/-action-exception-log-level-config/"><code>ActionExceptionLogLevelConfig</code></a><code>= ActionExceptionLogLevelConfig(), jetty_max_concurrent_streams:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>? = null, close_connection_percent:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><code>Double</code></a><code>= 0.0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -628,7 +628,7 @@
 <tbody>
 <tr>
 <td><a href="acceptors/">acceptors</a></td>
-<td><code>val acceptors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code></td>
+<td><code>val acceptors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code><br>Number of acceptor threads.</td>
 </tr>
 <tr>
 <td><a href="action_exception_log_level/">action_exception_log_level</a></td>
@@ -636,35 +636,39 @@
 </tr>
 <tr>
 <td><a href="close_connection_percent/">close_connection_percent</a></td>
-<td><code>val close_connection_percent:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><code>Double</code></a></td>
+<td><code>val close_connection_percent:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><code>Double</code></a><br>A value in <a href="#">0.0..100.0</a>. Include &lsquo;Connection: close&rsquo; in this percentage of responses.</td>
 </tr>
 <tr>
 <td><a href="host/">host</a></td>
-<td><code>val host:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>?</code></td>
+<td><code>val host:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>?</code><br>The network interface to bind to. Null or 0.0.0.0 to bind to all interfaces.</td>
+</tr>
+<tr>
+<td><a href="http2/">http2</a></td>
+<td><code>val http2:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><br>HTTP/2 support is currently opt-in because we can&rsquo;t load balance it dynamically.</td>
 </tr>
 <tr>
 <td><a href="idle_timeout/">idle_timeout</a></td>
-<td><code>val idle_timeout:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a></td>
+<td><code>val idle_timeout:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><br>If a connection is unused for this many milliseconds, it is closed.</td>
 </tr>
 <tr>
 <td><a href="jetty_max_concurrent_streams/">jetty_max_concurrent_streams</a></td>
-<td><code>val jetty_max_concurrent_streams:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code></td>
+<td><code>val jetty_max_concurrent_streams:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code><br>The maximum number of streams per HTTP/2 connection.</td>
 </tr>
 <tr>
 <td><a href="jetty_max_thread_pool_size/">jetty_max_thread_pool_size</a></td>
-<td><code>val jetty_max_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code></td>
+<td><code>val jetty_max_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code><br>Maximum number of threads in Jetty&rsquo;s thread pool.</td>
 </tr>
 <tr>
 <td><a href="port/">port</a></td>
-<td><code>val port:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a></td>
+<td><code>val port:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>HTTP port to listen on, or 0 for any available port.</td>
 </tr>
 <tr>
 <td><a href="queue_size/">queue_size</a></td>
-<td><code>val queue_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code></td>
+<td><code>val queue_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code><br>The accept backlog.</td>
 </tr>
 <tr>
 <td><a href="selectors/">selectors</a></td>
-<td><code>val selectors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code></td>
+<td><code>val selectors:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>?</code><br>Number of NIO selector threads.</td>
 </tr>
 <tr>
 <td><a href="ssl/">ssl</a></td>

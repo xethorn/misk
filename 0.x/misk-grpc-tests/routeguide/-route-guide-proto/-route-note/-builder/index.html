@@ -635,11 +635,11 @@
 </tbody>
 </table>
 <p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 1;` |
+&lt;br&gt; `optional .routeguide.Point location = 1;` |
 | [clearMessage](clear-message.md) | `fun clearMessage(): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The message to be sent. <br><code>``
-&lt;br&gt;</code>string message = 2;<code>|
+&lt;br&gt;</code>optional string message = 2;<code>|
 | [clearOneof](clear-oneof.md) |</code>fun clearOneof(oneof: OneofDescriptor): <code>[</code>Builder<code>](./index.md) |
 | [clone](clone.md) |</code>fun clone(): <code>[</code>Builder<code>](./index.md) |
 | [getDefaultInstanceForType](get-default-instance-for-type.md) |</code>fun getDefaultInstanceForType(): <code>[</code>RouteNote<code>](../index.md) |
@@ -647,45 +647,48 @@
 | [getDescriptorForType](get-descriptor-for-type.md) |</code>fun getDescriptorForType(): Descriptor<code>|
 | [getLocation](get-location.md) |</code>fun getLocation(): <code>[</code>Point`](../../-point/index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 1;` |
+&lt;br&gt; `optional .routeguide.Point location = 1;` |
 | [getLocationBuilder](get-location-builder.md) | `fun getLocationBuilder(): `[`Builder`](../../-point/-builder/index.md)&lt;br&gt;
 </pre></div>
  The location from which the message is sent. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 1;<code>|
+&lt;br&gt;</code>optional .routeguide.Point location = 1;<code>|
 | [getLocationOrBuilder](get-location-or-builder.md) |</code>fun getLocationOrBuilder(): <code>[</code>PointOrBuilder`](../../-point-or-builder/index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 1;` |
+&lt;br&gt; `optional .routeguide.Point location = 1;` |
 | [getMessage](get-message.md) | `fun getMessage(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)&lt;br&gt;
 </pre></div>
  The message to be sent. <br><code>``
-&lt;br&gt;</code>string message = 2;<code>|
+&lt;br&gt;</code>optional string message = 2;<code>|
 | [getMessageBytes](get-message-bytes.md) |</code>fun getMessageBytes(): ByteString`<br></p>
 <p><div class="codehilite"><pre><span></span> The message to be sent. &lt;br&gt;```
-&lt;br&gt; `string message = 2;` |
+&lt;br&gt; `optional string message = 2;` |
 | [hasLocation](has-location.md) | `fun hasLocation(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
 </pre></div>
  The location from which the message is sent. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 1;<code>|
-| [isInitialized](is-initialized.md) |</code>fun isInitialized(): <code>[</code>Boolean<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [mergeFrom](merge-from.md) |</code>fun mergeFrom(other: Message): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(other: <code>[</code>RouteNote<code>](../index.md)</code>): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun mergeFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): <code>[</code>Builder<code>](./index.md) |
-| [mergeLocation](merge-location.md) |</code>fun mergeLocation(value: <code>[</code>Point<code>](../../-point/index.md)</code>): <code>[</code>Builder`](./index.md)<br></p>
-<p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 1;` |
-| [mergeUnknownFields](merge-unknown-fields.md) | `fun mergeUnknownFields(unknownFields: UnknownFieldSet): `[`Builder`](./index.md) |
-| [setField](set-field.md) | `fun setField(field: FieldDescriptor, value: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`): `[`Builder`](./index.md) |
-| [setLocation](set-location.md) | `fun setLocation(value: `[`Point`](../../-point/index.md)`): `[`Builder`](./index.md)&lt;br&gt;`fun setLocation(builderForValue: `[`Builder`](../../-point/-builder/index.md)`): `[`Builder`](./index.md)&lt;br&gt;
+&lt;br&gt;</code>optional .routeguide.Point location = 1;<code>|
+| [hasMessage](has-message.md) |</code>fun hasMessage(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The message to be sent. &lt;br&gt;```
+&lt;br&gt; `optional string message = 2;` |
+| [isInitialized](is-initialized.md) | `fun isInitialized(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [mergeFrom](merge-from.md) | `fun mergeFrom(other: Message): `[`Builder`](./index.md)&lt;br&gt;`fun mergeFrom(other: `[`RouteNote`](../index.md)`): `[`Builder`](./index.md)&lt;br&gt;`fun mergeFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): `[`Builder`](./index.md) |
+| [mergeLocation](merge-location.md) | `fun mergeLocation(value: `[`Point`](../../-point/index.md)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The location from which the message is sent. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 1;<code>|
-| [setMessage](set-message.md) |</code>fun setMessage(value: <code>[</code>String<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)</code>): <code>[</code>Builder`](./index.md)<br></p>
-<p><div class="codehilite"><pre><span></span> The message to be sent. &lt;br&gt;```
-&lt;br&gt; `string message = 2;` |
-| [setMessageBytes](set-message-bytes.md) | `fun setMessageBytes(value: ByteString): `[`Builder`](./index.md)&lt;br&gt;
+&lt;br&gt;</code>optional .routeguide.Point location = 1;<code>|
+| [mergeUnknownFields](merge-unknown-fields.md) |</code>fun mergeUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder<code>](./index.md) |
+| [setField](set-field.md) |</code>fun setField(field: FieldDescriptor, value: <code>[</code>Any<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)</code>): <code>[</code>Builder<code>](./index.md) |
+| [setLocation](set-location.md) |</code>fun setLocation(value: <code>[</code>Point<code>](../../-point/index.md)</code>): <code>[</code>Builder<code>](./index.md)&lt;br&gt;</code>fun setLocation(builderForValue: <code>[</code>Builder<code>](../../-point/-builder/index.md)</code>): <code>[</code>Builder`](./index.md)<br></p>
+<p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
+&lt;br&gt; `optional .routeguide.Point location = 1;` |
+| [setMessage](set-message.md) | `fun setMessage(value: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Builder`](./index.md)&lt;br&gt;
 </pre></div>
  The message to be sent. <br><code>``
-&lt;br&gt;</code>string message = 2;<code>|
-| [setRepeatedField](set-repeated-field.md) |</code>fun setRepeatedField(field: FieldDescriptor, index: <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)</code>, value: <code>[</code>Any<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)</code>): <code>[</code>Builder<code>](./index.md) |
-| [setUnknownFields](set-unknown-fields.md) |</code>fun setUnknownFields(unknownFields: UnknownFieldSet): <code>[</code>Builder`](./index.md) |</p>
+&lt;br&gt;</code>optional string message = 2;<code>|
+| [setMessageBytes](set-message-bytes.md) |</code>fun setMessageBytes(value: ByteString): <code>[</code>Builder`](./index.md)<br></p>
+<p><code>The message to be sent. &lt;br&gt;</code>
+<br> <code>optional string message = 2;</code> |
+| <a href="set-repeated-field/">setRepeatedField</a> | <code>fun setRepeatedField(field: FieldDescriptor, index:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, value:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>):</code><a href="./"><code>Builder</code></a> |
+| <a href="set-unknown-fields/">setUnknownFields</a> | <code>fun setUnknownFields(unknownFields: UnknownFieldSet):</code><a href="./"><code>Builder</code></a> |</p>
                 
                   
                 

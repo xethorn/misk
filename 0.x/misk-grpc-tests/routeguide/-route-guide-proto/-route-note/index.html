@@ -635,33 +635,36 @@
 | [getLocation](get-location.md) | `fun getLocation(): `[`Point`](../-point/index.md)&lt;br&gt;
 </pre></div>
  The location from which the message is sent. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 1;<code>|
+&lt;br&gt;</code>optional .routeguide.Point location = 1;<code>|
 | [getLocationOrBuilder](get-location-or-builder.md) |</code>fun getLocationOrBuilder(): <code>[</code>PointOrBuilder`](../-point-or-builder/index.md)<br></p>
 <p><div class="codehilite"><pre><span></span> The location from which the message is sent. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 1;` |
+&lt;br&gt; `optional .routeguide.Point location = 1;` |
 | [getMessage](get-message.md) | `fun getMessage(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)&lt;br&gt;
 </pre></div>
  The message to be sent. <br><code>``
-&lt;br&gt;</code>string message = 2;<code>|
+&lt;br&gt;</code>optional string message = 2;<code>|
 | [getMessageBytes](get-message-bytes.md) |</code>fun getMessageBytes(): ByteString`<br></p>
 <p><div class="codehilite"><pre><span></span> The message to be sent. &lt;br&gt;```
-&lt;br&gt; `string message = 2;` |
+&lt;br&gt; `optional string message = 2;` |
 | [getParserForType](get-parser-for-type.md) | `fun getParserForType(): Parser&lt;`[`RouteNote`](./index.md)`&gt;` |
 | [getSerializedSize](get-serialized-size.md) | `fun getSerializedSize(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [getUnknownFields](get-unknown-fields.md) | `fun getUnknownFields(): UnknownFieldSet` |
 | [hasLocation](has-location.md) | `fun hasLocation(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
 </pre></div>
  The location from which the message is sent. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 1;<code>|
-| [hashCode](hash-code.md) |</code>fun hashCode(): <code>[</code>Int<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-| [isInitialized](is-initialized.md) |</code>fun isInitialized(): <code>[</code>Boolean<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [newBuilder](new-builder.md) |</code>static fun newBuilder(): <code>[</code>Builder<code>](-builder/index.md)&lt;br&gt;</code>static fun newBuilder(prototype: <code>[</code>RouteNote<code>](./index.md)</code>): <code>[</code>Builder<code>](-builder/index.md) |
-| [newBuilderForType](new-builder-for-type.md) |</code>fun newBuilderForType(): <code>[</code>Builder<code>](-builder/index.md) |
-| [parseDelimitedFrom](parse-delimited-from.md) |</code>static fun parseDelimitedFrom(input: <code>[</code>InputStream<code>](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)</code>): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseDelimitedFrom(input: <code>[</code>InputStream<code>](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)</code>, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md) |
-| [parseFrom](parse-from.md) |</code>static fun parseFrom(data: <code>[</code>ByteBuffer<code>](http://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)</code>): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(data: <code>[</code>ByteBuffer<code>](http://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)</code>, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(data: ByteString): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(data: ByteString, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(data: <code>[</code>ByteArray<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)</code>): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(data: <code>[</code>ByteArray<code>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)</code>, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(input: <code>[</code>InputStream<code>](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)</code>): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(input: <code>[</code>InputStream<code>](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)</code>, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(input: CodedInputStream): <code>[</code>RouteNote<code>](./index.md)&lt;br&gt;</code>static fun parseFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite): <code>[</code>RouteNote<code>](./index.md) |
-| [parser](parser.md) |</code>static fun parser(): Parser&lt;<code>[</code>RouteNote<code>](./index.md)</code>&gt;<code>|
-| [toBuilder](to-builder.md) |</code>fun toBuilder(): <code>[</code>Builder<code>](-builder/index.md) |
-| [writeTo](write-to.md) |</code>fun writeTo(output: CodedOutputStream): <code>[</code>Unit`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html</a>) |</p>
+&lt;br&gt;</code>optional .routeguide.Point location = 1;<code>|
+| [hasMessage](has-message.md) |</code>fun hasMessage(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><code>The message to be sent. &lt;br&gt;</code>
+<br> <code>optional string message = 2;</code> |
+| <a href="hash-code/">hashCode</a> | <code>fun hashCode():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a> |
+| <a href="is-initialized/">isInitialized</a> | <code>fun isInitialized():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a> |
+| <a href="new-builder/">newBuilder</a> | <code>static fun newBuilder():</code><a href="-builder/"><code>Builder</code></a><br><code>static fun newBuilder(prototype:</code><a href="./"><code>RouteNote</code></a><code>):</code><a href="-builder/"><code>Builder</code></a> |
+| <a href="new-builder-for-type/">newBuilderForType</a> | <code>fun newBuilderForType():</code><a href="-builder/"><code>Builder</code></a> |
+| <a href="parse-delimited-from/">parseDelimitedFrom</a> | <code>static fun parseDelimitedFrom(input:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a><code>):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseDelimitedFrom(input:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a><code>, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a> |
+| <a href="parse-from/">parseFrom</a> | <code>static fun parseFrom(data:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html"><code>ByteBuffer</code></a><code>):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(data:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html"><code>ByteBuffer</code></a><code>, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(data: ByteString):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(data: ByteString, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(data:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><code>ByteArray</code></a><code>):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(data:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><code>ByteArray</code></a><code>, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(input:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a><code>):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(input:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a><code>, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(input: CodedInputStream):</code><a href="./"><code>RouteNote</code></a><br><code>static fun parseFrom(input: CodedInputStream, extensionRegistry: ExtensionRegistryLite):</code><a href="./"><code>RouteNote</code></a> |
+| <a href="parser/">parser</a> | <code>static fun parser(): Parser&lt;</code><a href="./"><code>RouteNote</code></a><code>&gt;</code> |
+| <a href="to-builder/">toBuilder</a> | <code>fun toBuilder():</code><a href="-builder/"><code>Builder</code></a> |
+| <a href="write-to/">writeTo</a> | <code>fun writeTo(output: CodedOutputStream):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a> |</p>
                 
                   
                 

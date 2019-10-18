@@ -618,18 +618,32 @@
 </tbody>
 </table>
 <p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
-&lt;br&gt; `int32 distance = 3;` |
+&lt;br&gt; `optional int32 distance = 3;` |
 | [getElapsedTime](get-elapsed-time.md) | `abstract fun getElapsedTime(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The duration of the traversal in seconds. <br><code>``
-&lt;br&gt;</code>int32 elapsed_time = 4;<code>|
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
 | [getFeatureCount](get-feature-count.md) |</code>abstract fun getFeatureCount(): <code>[</code>Int`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
-&lt;br&gt; `int32 feature_count = 2;` |
+&lt;br&gt; `optional int32 feature_count = 2;` |
 | [getPointCount](get-point-count.md) | `abstract fun getPointCount(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)&lt;br&gt;
 </pre></div>
  The number of points received. <br><code>``
-&lt;br&gt;</code>int32 point_count = 1;` |</p>
+&lt;br&gt;</code>optional int32 point_count = 1;<code>|
+| [hasDistance](has-distance.md) |</code>abstract fun hasDistance(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The distance covered in metres. &lt;br&gt;```
+&lt;br&gt; `optional int32 distance = 3;` |
+| [hasElapsedTime](has-elapsed-time.md) | `abstract fun hasElapsedTime(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The duration of the traversal in seconds. <br><code>``
+&lt;br&gt;</code>optional int32 elapsed_time = 4;<code>|
+| [hasFeatureCount](has-feature-count.md) |</code>abstract fun hasFeatureCount(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
+<p><div class="codehilite"><pre><span></span> The number of known features passed while traversing the route. &lt;br&gt;```
+&lt;br&gt; `optional int32 feature_count = 2;` |
+| [hasPointCount](has-point-count.md) | `abstract fun hasPointCount(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The number of points received. <br><code>``
+&lt;br&gt;</code>optional int32 point_count = 1;` |</p>
 <h3 id="inheritors">Inheritors<a class="headerlink" href="#inheritors" title="Permanent link">&para;</a></h3>
 <table>
 <thead>

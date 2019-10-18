@@ -578,7 +578,7 @@
                 
                 <p><a href="../../../">misk-zookeeper</a> / <a href="../../">misk.clustering.zookeeper</a> / <a href="../">ZkLeaseModule</a> / <a href="./">provideTaskQueue</a></p>
 <h1 id="providetaskqueue">provideTaskQueue<a class="headerlink" href="#providetaskqueue" title="Permanent link">&para;</a></h1>
-<p><code>@Provides @Singleton fun provideTaskQueue(clock:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Clock.html"><code>Clock</code></a><code>, executorService:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html"><code>ExecutorService</code></a><code>): RepeatedTaskQueue</code></p>
+<p><code>@Provides @Singleton fun provideTaskQueue(queueFactory: RepeatedTaskQueueFactory): RepeatedTaskQueue</code></p>
                 
                   
                 

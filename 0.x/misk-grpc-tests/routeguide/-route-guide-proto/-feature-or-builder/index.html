@@ -573,6 +573,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#inheritors" title="Inheritors" class="md-nav__link">
+    Inheritors
+  </a>
+  
+</li>
+      
       
       
       
@@ -611,33 +618,46 @@
 </tbody>
 </table>
 <p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
 | [getLocationOrBuilder](get-location-or-builder.md) | `abstract fun getLocationOrBuilder(): `[`PointOrBuilder`](../-point-or-builder/index.md)&lt;br&gt;
 </pre></div>
  The point where the feature is detected. <br><code>``
-&lt;br&gt;</code>.routeguide.Point location = 2;<code>|
+&lt;br&gt;</code>optional .routeguide.Point location = 2;<code>|
 | [getName](get-name.md) |</code>abstract fun getName(): <code>[</code>String`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The name of the feature. &lt;br&gt;```
-&lt;br&gt; `string name = 1;` |
+&lt;br&gt; `optional string name = 1;` |
 | [getNameBytes](get-name-bytes.md) | `abstract fun getNameBytes(): ByteString`&lt;br&gt;
 </pre></div>
  The name of the feature. <br><code>``
-&lt;br&gt;</code>string name = 1;<code>|
+&lt;br&gt;</code>optional string name = 1;<code>|
 | [hasLocation](has-location.md) |</code>abstract fun hasLocation(): <code>[</code>Boolean`](<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html</a>)<br></p>
 <p><div class="codehilite"><pre><span></span> The point where the feature is detected. &lt;br&gt;```
-&lt;br&gt; `.routeguide.Point location = 2;` |
-
-### Inheritors
-
-| Name | Summary |
-|---|---|
-| [Builder](../-feature/-builder/index.md) | `class Builder : Builder&lt;`[`Builder`](../-feature/-builder/index.md)`&gt;, `[`FeatureOrBuilder`](./index.md)&lt;br&gt;
+&lt;br&gt; `optional .routeguide.Point location = 2;` |
+| [hasName](has-name.md) | `abstract fun hasName(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)&lt;br&gt;
+</pre></div>
+ The name of the feature. <br><code>``
+&lt;br&gt;</code>optional string name = 1;` |</p>
+<h3 id="inheritors">Inheritors<a class="headerlink" href="#inheritors" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../-feature/-builder/">Builder</a></td>
+<td><code>class Builder : Builder&lt;</code><a href="../-feature/-builder/"><code>Builder</code></a><code>&gt;,</code><a href="./"><code>FeatureOrBuilder</code></a><br></td>
+</tr>
+</tbody>
+</table>
+<p><div class="codehilite"><pre><span></span> A feature names something at a given point. If a feature could not be named, the name is empty. &lt;br&gt;```
+&lt;br&gt; Protobuf type `routeguide.Feature` |
+| [Feature](../-feature/index.md) | `class Feature : GeneratedMessageV3, `[`FeatureOrBuilder`](./index.md)&lt;br&gt;
 </pre></div>
  A feature names something at a given point. If a feature could not be named, the name is empty. <br><code>``
-&lt;br&gt; Protobuf type</code>routeguide.Feature<code>|
-| [Feature](../-feature/index.md) |</code>class Feature : GeneratedMessageV3, <code>[</code>FeatureOrBuilder`](./index.md)<br></p>
-<p><code>A feature names something at a given point. If a feature could not be named, the name is empty. &lt;br&gt;</code>
-<br> Protobuf type <code>routeguide.Feature</code> |</p>
+&lt;br&gt; Protobuf type</code>routeguide.Feature` |</p>
                 
                   
                 
