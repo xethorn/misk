@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -578,7 +590,7 @@
                 
                 <p><a href="../../../">misk</a> / <a href="../../">misk.client</a> / <a href="../">PeerClientFactory</a> / <a href="./">client</a></p>
 <h1 id="client">client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h1>
-<p><code>fun client(peer:</code><a href="../../../misk.clustering/-cluster/-member/"><code>Member</code></a><code>): OkHttpClient</code></p>
+<p><code>fun client(peer: Member): OkHttpClient</code></p>
 <p>Get a client to call the given peer cluster member.
 This client will fail when calling different services, as determined by the OU in the certificate
 returned by the called service.</p>

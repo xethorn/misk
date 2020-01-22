@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -578,7 +590,9 @@
                 
                 <p><a href="../../../">misk-aws</a> / <a href="../../">misk.jobqueue.sqs</a> / <a href="../">AwsSqsJobQueueConfig</a> / <a href="./">task_queue</a></p>
 <h1 id="task_queue">task_queue<a class="headerlink" href="#task_queue" title="Permanent link">&para;</a></h1>
-<p><code>val task_queue: RepeatedTaskQueueConfig</code></p>
+<p><code>val task_queue: RepeatedTaskQueueConfig?</code></p>
+<p>Task queue configuration, which should have a <code>num_parallel_tasks</code> equal or greater than the
+number of consumed queues. If undefined, an unbounded number of parallel tasks will be used.</p>
                 
                   
                 

@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -619,6 +631,14 @@
 <tr>
 <td><a href="get/">get</a></td>
 <td><code>abstract operator fun get(key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>): ByteString?</code><br>Retrieves the value for the given key as a <a href="#">ByteString</a>.</td>
+</tr>
+<tr>
+<td><a href="mget/">mget</a></td>
+<td><code>abstract fun mget(vararg keys:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;ByteString?&gt;</code><br>Retrieves the values for the given list of keys.</td>
+</tr>
+<tr>
+<td><a href="mset/">mset</a></td>
+<td><code>abstract fun mset(vararg keyValues: ByteString):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Sets the key value pairs.</td>
 </tr>
 <tr>
 <td><a href="set/">set</a></td>

@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -580,6 +592,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extensions-for-external-classes" title="Extensions for External Classes" class="md-nav__link">
+    Extensions for External Classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#functions" title="Functions" class="md-nav__link">
     Functions
   </a>
@@ -628,8 +647,16 @@
 <td><code>data class Attributes</code><br>Extra attributes to be used for evaluating features.</td>
 </tr>
 <tr>
+<td><a href="-dynamic-config/">DynamicConfig</a></td>
+<td><code>interface DynamicConfig</code><br>Interface for evaluating dynamic flags. Dynamic flags are similar to feature flags, but they don&rsquo;t support different variations for different keys.</td>
+</tr>
+<tr>
 <td><a href="-feature/">Feature</a></td>
 <td><code>data class Feature</code><br>Typed feature string.</td>
+</tr>
+<tr>
+<td><a href="-feature-flag-validation/">FeatureFlagValidation</a></td>
+<td><code>object FeatureFlagValidation</code></td>
 </tr>
 <tr>
 <td><a href="-feature-flags/">FeatureFlags</a></td>
@@ -638,6 +665,21 @@
 <tr>
 <td><a href="-feature-service/">FeatureService</a></td>
 <td><code>interface FeatureService : Service</code><br>Marker interface to integrate with the misk service graph.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extensions-for-external-classes">Extensions for External Classes<a class="headerlink" href="#extensions-for-external-classes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="com.squareup.moshi.-json-adapter/">com.squareup.moshi.JsonAdapter</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -652,7 +694,11 @@
 <tbody>
 <tr>
 <td><a href="get-enum/">getEnum</a></td>
-<td><code>fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt;</code><a href="-feature-flags/"><code>FeatureFlags</code></a><code>.getEnum(feature:</code><a href="-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-enum/#T"><code>T</code></a></td>
+<td><code>fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt;</code><a href="-dynamic-config/"><code>DynamicConfig</code></a><code>.getEnum(feature:</code><a href="-feature/"><code>Feature</code></a><code>):</code><a href="get-enum/#T"><code>T</code></a><br><code>fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt;</code><a href="-feature-flags/"><code>FeatureFlags</code></a><code>.getEnum(feature:</code><a href="-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-enum/#T"><code>T</code></a></td>
+</tr>
+<tr>
+<td><a href="get-json/">getJson</a></td>
+<td><code>fun &lt;T&gt;</code><a href="-dynamic-config/"><code>DynamicConfig</code></a><code>.getJson(feature:</code><a href="-feature/"><code>Feature</code></a><code>):</code><a href="get-json/#T"><code>T</code></a><br><code>fun &lt;T&gt;</code><a href="-feature-flags/"><code>FeatureFlags</code></a><code>.getJson(feature:</code><a href="-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-json/#T"><code>T</code></a></td>
 </tr>
 </tbody>
 </table>

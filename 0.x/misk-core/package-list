@@ -1,0 +1,19 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:misk.logging$debug(mu.KLogger, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/debug.md
+$dokka.location:misk.logging$debug(mu.KLogger, kotlin.Throwable, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/debug.md
+$dokka.location:misk.logging$error(mu.KLogger, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/error.md
+$dokka.location:misk.logging$error(mu.KLogger, kotlin.Throwable, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/error.md
+$dokka.location:misk.logging$info(mu.KLogger, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/info.md
+$dokka.location:misk.logging$info(mu.KLogger, kotlin.Throwable, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/info.md
+$dokka.location:misk.logging$log(mu.KLogger, org.slf4j.event.Level, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/log.md
+$dokka.location:misk.logging$log(mu.KLogger, org.slf4j.event.Level, kotlin.Throwable, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/log.md
+$dokka.location:misk.logging$warn(mu.KLogger, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/warn.md
+$dokka.location:misk.logging$warn(mu.KLogger, kotlin.Throwable, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Any)))), kotlin.Function0((kotlin.Any)))misk.logging/mu.-k-logger/warn.md
+misk.backoff
+misk.clustering
+misk.clustering.fake
+misk.clustering.fake.lease
+misk.clustering.lease
+misk.logging
+misk.random

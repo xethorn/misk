@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -595,6 +607,7 @@
                 <p><a href="../../">misk-grpc-tests</a> / <a href="../">routeguide</a> / <a href="./">RouteGuideClient</a></p>
 <h1 id="routeguideclient">RouteGuideClient<a class="headerlink" href="#routeguideclient" title="Permanent link">&para;</a></h1>
 <p><code>interface RouteGuideClient : Service</code></p>
+<p>Interface exported by the server.</p>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -606,19 +619,19 @@
 <tbody>
 <tr>
 <td><a href="-get-feature/">GetFeature</a></td>
-<td><code>abstract fun GetFeature(): GrpcCall&lt;</code><a href="../-point/"><code>Point</code></a><code>,</code><a href="../-feature/"><code>Feature</code></a><code>&gt;</code></td>
+<td><code>abstract fun GetFeature(): GrpcCall&lt;</code><a href="../-point/"><code>Point</code></a><code>,</code><a href="../-feature/"><code>Feature</code></a><code>&gt;</code><br>A simple RPC.</td>
 </tr>
 <tr>
 <td><a href="-list-features/">ListFeatures</a></td>
-<td><code>abstract fun ListFeatures(): GrpcStreamingCall&lt;</code><a href="../-rectangle/"><code>Rectangle</code></a><code>,</code><a href="../-feature/"><code>Feature</code></a><code>&gt;</code></td>
+<td><code>abstract fun ListFeatures(): GrpcStreamingCall&lt;</code><a href="../-rectangle/"><code>Rectangle</code></a><code>,</code><a href="../-feature/"><code>Feature</code></a><code>&gt;</code><br>A server-to-client streaming RPC.</td>
 </tr>
 <tr>
 <td><a href="-record-route/">RecordRoute</a></td>
-<td><code>abstract fun RecordRoute(): GrpcStreamingCall&lt;</code><a href="../-point/"><code>Point</code></a><code>,</code><a href="../-route-summary/"><code>RouteSummary</code></a><code>&gt;</code></td>
+<td><code>abstract fun RecordRoute(): GrpcStreamingCall&lt;</code><a href="../-point/"><code>Point</code></a><code>,</code><a href="../-route-summary/"><code>RouteSummary</code></a><code>&gt;</code><br>A client-to-server streaming RPC.</td>
 </tr>
 <tr>
 <td><a href="-route-chat/">RouteChat</a></td>
-<td><code>abstract fun RouteChat(): GrpcStreamingCall&lt;</code><a href="../-route-note/"><code>RouteNote</code></a><code>,</code><a href="../-route-note/"><code>RouteNote</code></a><code>&gt;</code></td>
+<td><code>abstract fun RouteChat(): GrpcStreamingCall&lt;</code><a href="../-route-note/"><code>RouteNote</code></a><code>,</code><a href="../-route-note/"><code>RouteNote</code></a><code>&gt;</code><br>A Bidirectional streaming RPC.</td>
 </tr>
 </tbody>
 </table>

@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -688,6 +700,10 @@ scheme like <code>classpath:</code> as the key.</p>
 <tr>
 <td><a href="put/">put</a></td>
 <td><code>fun put(address:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, utf8:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Writes a resource as UTF-8. Throws if the backend is readonly.<code>fun put(address:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, data: ByteString):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Writes a resource. Throws if the backend is readonly.</td>
+</tr>
+<tr>
+<td><a href="require-utf8/">requireUtf8</a></td>
+<td><code>fun requireUtf8(address:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><br>Like <a href="utf8/">utf8</a>, but throws <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a> if the resource is missing.</td>
 </tr>
 <tr>
 <td><a href="utf8/">utf8</a></td>

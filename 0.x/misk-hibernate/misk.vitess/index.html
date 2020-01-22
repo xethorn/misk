@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -580,8 +592,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#properties" title="Properties" class="md-nav__link">
-    Properties
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
   </a>
   
 </li>
@@ -624,24 +636,44 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="-cockroach-cluster/">CockroachCluster</a></td>
+<td><code>class CockroachCluster</code></td>
+</tr>
+<tr>
+<td><a href="-database-server/">DatabaseServer</a></td>
+<td><code>interface DatabaseServer</code><br>Represents a database server for development/testing generally running in Docker.</td>
+</tr>
+<tr>
+<td><a href="-docker-cockroach-cluster/">DockerCockroachCluster</a></td>
+<td><code>class DockerCockroachCluster :</code><a href="-database-server/"><code>DatabaseServer</code></a></td>
+</tr>
+<tr>
+<td><a href="-docker-tidb-cluster/">DockerTidbCluster</a></td>
+<td><code>class DockerTidbCluster :</code><a href="-database-server/"><code>DatabaseServer</code></a></td>
+</tr>
+<tr>
 <td><a href="-docker-vitess-cluster/">DockerVitessCluster</a></td>
-<td><code>class DockerVitessCluster</code></td>
+<td><code>class DockerVitessCluster :</code><a href="-database-server/"><code>DatabaseServer</code></a></td>
 </tr>
 <tr>
 <td><a href="-keyspace/">Keyspace</a></td>
 <td><code>class Keyspace</code></td>
 </tr>
 <tr>
-<td><a href="-log-container-result-callback/">LogContainerResultCallback</a></td>
-<td><code>class LogContainerResultCallback : ResultCallbackTemplate&lt;</code><a href="-log-container-result-callback/"><code>LogContainerResultCallback</code></a><code>, Frame&gt;</code></td>
+<td><a href="-start-database-service/">StartDatabaseService</a></td>
+<td><code>class StartDatabaseService : AbstractIdleService</code><br>All Vitess clusters used by the app/test are tracked in a global cache as a <a href="-docker-vitess-cluster/">DockerVitessCluster</a>.</td>
 </tr>
 <tr>
 <td><a href="-start-vitess-service/">StartVitessService</a></td>
-<td><code>class StartVitessService : AbstractIdleService</code><br>All Vitess clusters used by the app/test are tracked in a global cache as a <a href="-docker-vitess-cluster/">DockerVitessCluster</a>.</td>
+<td><code>class StartVitessService</code></td>
 </tr>
 <tr>
 <td><a href="-table/">Table</a></td>
 <td><code>class Table</code></td>
+</tr>
+<tr>
+<td><a href="-tidb-cluster/">TidbCluster</a></td>
+<td><code>class TidbCluster</code></td>
 </tr>
 <tr>
 <td><a href="-vitess-cluster/">VitessCluster</a></td>
@@ -649,7 +681,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -659,16 +691,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="-c-o-n-t-a-i-n-e-r_-n-a-m-e_-p-r-e-f-i-x/">CONTAINER_NAME_PREFIX</a></td>
-<td><code>const val CONTAINER_NAME_PREFIX:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
-</tr>
-<tr>
-<td><a href="-v-i-t-e-s-s_-i-m-a-g-e/">VITESS_IMAGE</a></td>
-<td><code>const val VITESS_IMAGE:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
-</tr>
-<tr>
-<td><a href="-v-i-t-e-s-s_-s-h-a/">VITESS_SHA</a></td>
-<td><code>const val VITESS_SHA:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
+<td><a href="run-command/">runCommand</a></td>
+<td><code>fun runCommand(command:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a></td>
 </tr>
 </tbody>
 </table>

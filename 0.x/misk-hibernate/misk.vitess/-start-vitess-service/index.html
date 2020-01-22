@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -567,43 +579,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types" title="Types" class="md-nav__link">
-    Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" title="Properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
-    Functions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#companion-object-properties" title="Companion Object Properties" class="md-nav__link">
-    Companion Object Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#companion-object-functions" title="Companion Object Functions" class="md-nav__link">
-    Companion Object Functions
   </a>
   
 </li>
@@ -629,29 +606,7 @@
                 
                 <p><a href="../../">misk-hibernate</a> / <a href="../">misk.vitess</a> / <a href="./">StartVitessService</a></p>
 <h1 id="startvitessservice">StartVitessService<a class="headerlink" href="#startvitessservice" title="Permanent link">&para;</a></h1>
-<p><code>class StartVitessService : AbstractIdleService</code></p>
-<p>All Vitess clusters used by the app/test are tracked in a global cache as a <a href="../-docker-vitess-cluster/">DockerVitessCluster</a>.</p>
-<p>On startup, the service will look for a cluster in the cache, and if not found, look for it in
-Docker by container name, or as a last resort start the container itself.</p>
-<p>On shutdown, the cache is invalidated by a JVM shutdown hook. On invalidation, the cache will
-call the each entry&rsquo;s <code>stop()</code> method. If the cluster container was created in this JVM, it
-will be stopped and removed. Otherwise (if the container was started by a different process), it
-will be left running.</p>
-<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-vitess-cluster-config/">VitessClusterConfig</a></td>
-<td><code>data class VitessClusterConfig</code></td>
-</tr>
-</tbody>
-</table>
+<p><code>class StartVitessService</code></p>
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -663,87 +618,7 @@ will be left running.</p>
 <tbody>
 <tr>
 <td><a href="-init-/">&lt;init&gt;</a></td>
-<td><code>StartVitessService(qualifier:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><code>KClass</code></a><code>&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><code>Annotation</code></a><code>&gt;, environment: Environment, config:</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a><code>)</code><br>All Vitess clusters used by the app/test are tracked in a global cache as a <a href="../-docker-vitess-cluster/">DockerVitessCluster</a>.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="cluster/">cluster</a></td>
-<td><code>var cluster:</code><a href="../-docker-vitess-cluster/"><code>DockerVitessCluster</code></a><code>?</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="cluster/">cluster</a></td>
-<td><code>fun cluster():</code><a href="../-vitess-cluster/"><code>VitessCluster</code></a><code>?</code></td>
-</tr>
-<tr>
-<td><a href="shut-down/">shutDown</a></td>
-<td><code>fun shutDown():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
-</tr>
-<tr>
-<td><a href="start-up/">startUp</a></td>
-<td><code>fun startUp():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
-</tr>
-</tbody>
-</table>
-<h3 id="companion-object-properties">Companion Object Properties<a class="headerlink" href="#companion-object-properties" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="clusters/">clusters</a></td>
-<td><code>val clusters: LoadingCache&lt;</code><a href="-vitess-cluster-config/"><code>VitessClusterConfig</code></a><code>,</code><a href="../-docker-vitess-cluster/"><code>DockerVitessCluster</code></a><code>&gt;</code><br>Global cache of running vitess clusters.</td>
-</tr>
-<tr>
-<td><a href="docker/">docker</a></td>
-<td><code>val docker: DockerClient</code></td>
-</tr>
-<tr>
-<td><a href="logger/">logger</a></td>
-<td><code>val logger: KLogger</code></td>
-</tr>
-<tr>
-<td><a href="moshi/">moshi</a></td>
-<td><code>val moshi: Moshi</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="companion-object-functions">Companion Object Functions<a class="headerlink" href="#companion-object-functions" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="start-vitess-daemon/">startVitessDaemon</a></td>
-<td><code>fun startVitessDaemon(qualifier:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><code>KClass</code></a><code>&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><code>Annotation</code></a><code>&gt;, config:</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>A helper method to start the Vitess cluster outside of the dev server or test process, to enable rapid iteration. This should be called directly a <code>main()</code> function, for example:</td>
+<td><code>StartVitessService()</code></td>
 </tr>
 </tbody>
 </table>

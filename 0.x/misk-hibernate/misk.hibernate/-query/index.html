@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -642,6 +654,10 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="first-result/">firstResult</a></td>
+<td><code>abstract var firstResult:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Set the first row to retrieve. The default is 0.</td>
+</tr>
+<tr>
 <td><a href="max-rows/">maxRows</a></td>
 <td><code>abstract var maxRows:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>How many rows to return. Must be -1 or in range 1..10_000.</td>
 </tr>
@@ -669,6 +685,22 @@
 <td><code>abstract fun disableCheck(check:</code><a href="../-check/"><code>Check</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
 </tr>
 <tr>
+<td><a href="dynamic-add-constraint/">dynamicAddConstraint</a></td>
+<td><code>abstract fun dynamicAddConstraint(path:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, operator:</code><a href="../-operator/"><code>Operator</code></a><code>, value:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>? = null):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Constrain a query using a path known only at runtime.</td>
+</tr>
+<tr>
+<td><a href="dynamic-add-order/">dynamicAddOrder</a></td>
+<td><code>abstract fun dynamicAddOrder(path:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, asc:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td><a href="dynamic-list/">dynamicList</a></td>
+<td><code>abstract fun dynamicList(session:</code><a href="../-session/"><code>Session</code></a><code>, selection: (CriteriaBuilder, Root&lt;</code><a href="./#T"><code>T</code></a><code>&gt;) -&gt; Selection&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>?&gt;&gt;</code><br>Manual projections are returned as a list of rows containing a list of cells.<code>abstract fun dynamicList(session:</code><a href="../-session/"><code>Session</code></a><code>, projectedPaths:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>?&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><a href="dynamic-unique-result/">dynamicUniqueResult</a></td>
+<td><code>abstract fun dynamicUniqueResult(session:</code><a href="../-session/"><code>Session</code></a><code>, selection: (CriteriaBuilder, Root&lt;</code><a href="./#T"><code>T</code></a><code>&gt;) -&gt; Selection&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>?&gt;?</code><br>Manual projections are returned as a list of cells. Returns null if there were no results.<code>abstract fun dynamicUniqueResult(session:</code><a href="../-session/"><code>Session</code></a><code>, projectedPaths:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><code>Any</code></a><code>?&gt;?</code></td>
+</tr>
+<tr>
 <td><a href="list/">list</a></td>
 <td><code>abstract fun list(session:</code><a href="../-session/"><code>Session</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="./#T"><code>T</code></a><code>&gt;</code></td>
 </tr>
@@ -678,7 +710,7 @@
 </tr>
 <tr>
 <td><a href="unique-result/">uniqueResult</a></td>
-<td><code>abstract fun uniqueResult(session:</code><a href="../-session/"><code>Session</code></a><code>):</code><a href="./#T"><code>T</code></a><code>?</code></td>
+<td><code>abstract fun uniqueResult(session:</code><a href="../-session/"><code>Session</code></a><code>):</code><a href="./#T"><code>T</code></a><code>?</code><br>Asserts that there is either zero or one results.</td>
 </tr>
 </tbody>
 </table>

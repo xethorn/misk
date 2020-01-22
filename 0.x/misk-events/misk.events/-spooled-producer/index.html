@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -612,11 +624,11 @@ to the event stream, and are done so through a <a href="../-producer/">Producer<
 <tbody>
 <tr>
 <td><a href="publish/">publish</a></td>
-<td><code>abstract fun publish(session: Session, groupRootId: Gid&lt;*, *&gt;, topic:</code><a href="../-topic/"><code>Topic</code></a><code>, vararg event:</code><a href="../-event/"><code>Event</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Publishes events to a sharded spool.</td>
+<td><code>abstract fun publish(session: Session, groupRootId: Gid&lt;*, *&gt;, topic: Topic, vararg event: Event):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Publishes events to a sharded spool.</td>
 </tr>
 <tr>
 <td><a href="publish-unsharded/">publishUnsharded</a></td>
-<td><code>abstract fun publishUnsharded(session: Session, topic:</code><a href="../-topic/"><code>Topic</code></a><code>, vararg event:</code><a href="../-event/"><code>Event</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Publishes events to an unsharded spool.</td>
+<td><code>abstract fun publishUnsharded(session: Session, topic: Topic, vararg event: Event):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Publishes events to an unsharded spool.</td>
 </tr>
 </tbody>
 </table>

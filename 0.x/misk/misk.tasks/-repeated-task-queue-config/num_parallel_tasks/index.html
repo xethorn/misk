@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -579,7 +591,10 @@
                 <p><a href="../../../">misk</a> / <a href="../../">misk.tasks</a> / <a href="../">RepeatedTaskQueueConfig</a> / <a href="./">num_parallel_tasks</a></p>
 <h1 id="num_parallel_tasks">num_parallel_tasks<a class="headerlink" href="#num_parallel_tasks" title="Permanent link">&para;</a></h1>
 <p><code>val num_parallel_tasks:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a></p>
-<p>The number of parallel tasks to run.</p>
+<p>The fixed number of parallel tasks to run.</p>
+<p>If -1 then an unbounded number of parallel tasks are allowed. An unbounded number of tasks can
+be useful for an App that needs to dynamically compute the number of tasks at runtime. However,
+the App is then responsible for ensuring an upper bound for the number of tasks submitted.</p>
                 
                   
                 

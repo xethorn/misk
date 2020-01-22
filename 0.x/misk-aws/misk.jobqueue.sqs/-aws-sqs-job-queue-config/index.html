@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -615,7 +627,7 @@ Simple Queuing Service</p>
 <tbody>
 <tr>
 <td><a href="-init-/">&lt;init&gt;</a></td>
-<td><code>AwsSqsJobQueueConfig(concurrent_receivers_per_queue:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 1, external_queues:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><code>Map</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>,</code><a href="../-aws-sqs-queue-config/"><code>AwsSqsQueueConfig</code></a><code>&gt; = mapOf(), consumer_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 4, task_queue: RepeatedTaskQueueConfig = RepeatedTaskQueueConfig())</code><br><a href="./">AwsSqsJobQueueConfig</a> is the configuration for job queueing backed by Amazon&rsquo;s Simple Queuing Service</td>
+<td><code>AwsSqsJobQueueConfig(external_queues:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><code>Map</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>,</code><a href="../-aws-sqs-queue-config/"><code>AwsSqsQueueConfig</code></a><code>&gt; = mapOf(), message_batch_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 10, task_queue: RepeatedTaskQueueConfig? = null, clustered_consumers:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><code>= true, queue_attribute_importer_frequency_ms:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><code>= 1000)</code><br><a href="./">AwsSqsJobQueueConfig</a> is the configuration for job queueing backed by Amazon&rsquo;s Simple Queuing Service</td>
 </tr>
 </tbody>
 </table>
@@ -629,20 +641,24 @@ Simple Queuing Service</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="concurrent_receivers_per_queue/">concurrent_receivers_per_queue</a></td>
-<td><code>val concurrent_receivers_per_queue:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Number of receiver threads to run per queue. Each receiver thread can pull up to 10 messages at a time, so this parameter controls how many fetches of 10 are outstanding at any one time.</td>
-</tr>
-<tr>
-<td><a href="consumer_thread_pool_size/">consumer_thread_pool_size</a></td>
-<td><code>val consumer_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Number of jobs that can be processed concurrently.</td>
+<td><a href="clustered_consumers/">clustered_consumers</a></td>
+<td><code>val clustered_consumers:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><br>The number of receivers will be distributed among the app cluster If <a href="clustered_consumers/">clustered_consumers</a> is true. Otherwise, each app in the cluster will run the number of receivers.</td>
 </tr>
 <tr>
 <td><a href="external_queues/">external_queues</a></td>
 <td><code>val external_queues:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><code>Map</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>,</code><a href="../-aws-sqs-queue-config/"><code>AwsSqsQueueConfig</code></a><code>&gt;</code><br>External queues is a set of externally owned SQS queues accessed by this service, mapping an internal queue name to the (account ID, region, name) of the queue in the external account</td>
 </tr>
 <tr>
+<td><a href="message_batch_size/">message_batch_size</a></td>
+<td><code>val message_batch_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Max number of messages to pull from SQS with each request.</td>
+</tr>
+<tr>
+<td><a href="queue_attribute_importer_frequency_ms/">queue_attribute_importer_frequency_ms</a></td>
+<td><code>val queue_attribute_importer_frequency_ms:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><br>Frequency used to import Queue Attributes in milliseconds.</td>
+</tr>
+<tr>
 <td><a href="task_queue/">task_queue</a></td>
-<td><code>val task_queue: RepeatedTaskQueueConfig</code></td>
+<td><code>val task_queue: RepeatedTaskQueueConfig?</code><br>Task queue configuration, which should have a <code>num_parallel_tasks</code> equal or greater than the number of consumed queues. If undefined, an unbounded number of parallel tasks will be used.</td>
 </tr>
 </tbody>
 </table>

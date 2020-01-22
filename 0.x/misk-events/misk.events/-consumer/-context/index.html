@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -618,7 +630,7 @@
 </tr>
 <tr>
 <td><a href="topic/">topic</a></td>
-<td><code>abstract val topic:</code><a href="../../-topic/"><code>Topic</code></a><br>the topic from which events are being received</td>
+<td><code>abstract val topic: Topic</code><br>the topic from which events are being received</td>
 </tr>
 </tbody>
 </table>
@@ -633,7 +645,7 @@
 <tbody>
 <tr>
 <td><a href="retry-later/">retryLater</a></td>
-<td><code>abstract fun retryLater(vararg events:</code><a href="../../-event/"><code>Event</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Defers processing a set of events to a later time, typically placing them on a retry queue</td>
+<td><code>abstract fun retryLater(vararg events: Event):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Defers processing a set of events to a later time, typically placing them on a retry queue</td>
 </tr>
 </tbody>
 </table>

@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -579,6 +591,9 @@
                 <p><a href="../../../">misk-grpc-tests</a> / <a href="../../">routeguide</a> / <a href="../">RouteGuideClient</a> / <a href="./">RecordRoute</a></p>
 <h1 id="recordroute">RecordRoute<a class="headerlink" href="#recordroute" title="Permanent link">&para;</a></h1>
 <p><code>abstract fun RecordRoute(): GrpcStreamingCall&lt;</code><a href="../../-point/"><code>Point</code></a><code>,</code><a href="../../-route-summary/"><code>RouteSummary</code></a><code>&gt;</code></p>
+<p>A client-to-server streaming RPC.</p>
+<p>Accepts a stream of Points on a route being traversed, returning a
+RouteSummary when traversal is completed.</p>
                 
                   
                 

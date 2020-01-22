@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -631,11 +643,11 @@ running in the same cluster.</p>
 <tbody>
 <tr>
 <td><a href="base-url/">baseUrl</a></td>
-<td><code>fun baseUrl(peer:</code><a href="../../misk.clustering/-cluster/-member/"><code>Member</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><br>Get the base URL for calling the given peer cluster member.</td>
+<td><code>fun baseUrl(peer: Member):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><br>Get the base URL for calling the given peer cluster member.</td>
 </tr>
 <tr>
 <td><a href="client/">client</a></td>
-<td><code>fun client(peer:</code><a href="../../misk.clustering/-cluster/-member/"><code>Member</code></a><code>): OkHttpClient</code><br>Get a client to call the given peer cluster member. This client will fail when calling different services, as determined by the OU in the certificate returned by the called service.</td>
+<td><code>fun client(peer: Member): OkHttpClient</code><br>Get a client to call the given peer cluster member. This client will fail when calling different services, as determined by the OU in the certificate returned by the called service.</td>
 </tr>
 </tbody>
 </table>

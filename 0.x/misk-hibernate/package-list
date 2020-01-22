@@ -1,5 +1,7 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
+$dokka.location:misk.hibernate$getByType(java.sql.ResultSet, kotlin.reflect.KClass((kotlin.Any)), kotlin.String)misk.hibernate/java.sql.-result-set/get-by-type.md
+$dokka.location:misk.hibernate$setByType(java.sql.PreparedStatement, kotlin.reflect.KClass((kotlin.Any)), kotlin.Int, kotlin.Any)misk.hibernate/java.sql.-prepared-statement/set-by-type.md
 $dokka.location:misk.jdbc$map(java.sql.ResultSet, kotlin.Function1((java.sql.ResultSet, misk.jdbc.map.T)))misk.jdbc/java.sql.-result-set/map.md
 $dokka.location:misk.jdbc$maybeInt(java.sql.ResultSet)misk.jdbc/java.sql.-result-set/maybe-int.md
 $dokka.location:misk.jdbc$maybeLong(java.sql.ResultSet)misk.jdbc/java.sql.-result-set/maybe-long.md

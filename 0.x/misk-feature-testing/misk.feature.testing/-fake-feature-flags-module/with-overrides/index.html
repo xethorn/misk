@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -582,8 +594,8 @@
 <p>Add overrides for the feature flags. Allows flags to be overridden at module instantiation
 instead of within individual test classes.</p>
 <p>Usage:</p>
-<div class="codehilite"><pre><span></span>install(FakeFeatureFlagsModule().withOverrides { flags -&gt;
-  flags.overrideBool(Feature(&quot;foo&quot;), true)
+<div class="codehilite"><pre><span></span>install(FakeFeatureFlagsModule().withOverrides {
+  override(Feature(&quot;foo&quot;), true)
 })
 </pre></div>
                 

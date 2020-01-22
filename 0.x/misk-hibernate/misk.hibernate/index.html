@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -594,6 +606,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extensions-for-external-classes" title="Extensions for External Classes" class="md-nav__link">
+    Extensions for External Classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#functions" title="Functions" class="md-nav__link">
     Functions
   </a>
@@ -742,6 +761,14 @@
 <td><code>interface TransacterService : Service</code><br>Marker interface for services that provide database transactors.</td>
 </tr>
 <tr>
+<td><a href="-transformer/">Transformer</a></td>
+<td><code>abstract class Transformer</code></td>
+</tr>
+<tr>
+<td><a href="-transformer-context/">TransformerContext</a></td>
+<td><code>data class TransformerContext</code></td>
+</tr>
+<tr>
 <td><a href="-validation-report/">ValidationReport</a></td>
 <td><code>data class ValidationReport</code></td>
 </tr>
@@ -788,6 +815,10 @@
 <td><a href="-select/">Select</a></td>
 <td><code>annotation class Select</code><br>Annotates a function on a subinterface of <a href="-query/">Query</a> to execute a <code>SELECT</code> query. Functions with this annotation must return a <code>List</code> to fetch multiple rows results, or a regular type to fetch a unique result.</td>
 </tr>
+<tr>
+<td><a href="-transformed-type/">TransformedType</a></td>
+<td><code>annotation class TransformedType</code><br><a href="-transformed-type/">TransformedType</a> is a meta-annotation for assigning arbitrary transformers to entity fields. Use it to annotate attributes that will mark a field to be transformed.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
@@ -806,6 +837,25 @@
 <tr>
 <td><a href="-retry-transaction-exception/">RetryTransactionException</a></td>
 <td><code>class RetryTransactionException :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><code>Exception</code></a><br>Thrown to explicitly trigger a retry, subject to retry limits and config such as noRetries().</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extensions-for-external-classes">Extensions for External Classes<a class="headerlink" href="#extensions-for-external-classes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="java.sql.-prepared-statement/">java.sql.PreparedStatement</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="java.sql.-result-set/">java.sql.ResultSet</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -860,7 +910,7 @@
 </tr>
 <tr>
 <td><a href="shards/">shards</a></td>
-<td><code>fun</code><a href="-session/"><code>Session</code></a><code>.shards(keyspace:</code><a href="-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards(keyspace:</code><a href="-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code></td>
+<td><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code><br><code>fun</code><a href="-transacter/"><code>Transacter</code></a><code>.shards(keyspace:</code><a href="-keyspace/"><code>Keyspace</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><code>Collection</code></a><code>&lt;</code><a href="-shard/"><code>Shard</code></a><code>&gt;</code></td>
 </tr>
 <tr>
 <td><a href="tablet-does-not-exists/">tabletDoesNotExists</a></td>

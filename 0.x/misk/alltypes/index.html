@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -690,8 +702,8 @@
 <td>Annotation indicating that a given action requires an authenticated caller - either a human in a specific capability, or one of a set of services</td>
 </tr>
 <tr>
-<td><a href="../misk.backoff/-backoff/">misk.backoff.Backoff</a></td>
-<td>Calculates how long to backoff on a retry. <a href="../misk.backoff/-backoff/">Backoff</a>s are stateful and not thread-safe</td>
+<td><a href="../misk.web/-available-when-degraded/">misk.web.AvailableWhenDegraded</a></td>
+<td>When the service is overloaded Misk will intervene and reject calls by returning &ldquo;HTTP 503 Service Unavailable&rdquo;. We call this load shedding and it works similarly to flow control in TCP.</td>
 </tr>
 <tr>
 <td><a href="../misk.exceptions/-bad-request-exception/">misk.exceptions.BadRequestException</a></td>
@@ -774,32 +786,16 @@
 <td>The common set of <a href="../misk.client/-client-network-interceptor/">ClientNetworkInterceptor</a>s for all misk apps.</td>
 </tr>
 <tr>
-<td><a href="../misk.clustering/-cluster/">misk.clustering.Cluster</a></td>
-<td>A <a href="../misk.clustering/-cluster/">Cluster</a> provides access to cluster membership for a service, allowing instances of a service to monitor the state of its peers</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering/-cluster-hash-ring/">misk.clustering.ClusterHashRing</a></td>
-<td>A <a href="../misk.clustering/-cluster-hash-ring/">ClusterHashRing</a> maps resources to cluster members based on a consistent hash</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering/-cluster-resource-mapper/">misk.clustering.ClusterResourceMapper</a></td>
-<td>A <a href="../misk.clustering/-cluster-resource-mapper/">ClusterResourceMapper</a> maps string based resource IDs onto members of a cluster for the purposes of resource ownership. The default <a href="../misk.clustering/-cluster-resource-mapper/">ClusterResourceMapper</a> is a <a href="../misk.clustering/-cluster-hash-ring/">ClusterHashRing</a> which performs a consistent hash across the cluster member, but <a href="../misk.clustering/-cluster/">Cluster</a>s can supply their own mappings if there is a mechanism specific to that cluster (or to supply a fake)</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering/-cluster-service/">misk.clustering.ClusterService</a></td>
-<td>Marker interface for the service that produces a <a href="../misk.clustering/-cluster/">Cluster</a>.</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering/-cluster-watch/">misk.clustering.ClusterWatch</a></td>
-<td>A <a href="../misk.clustering/-cluster-watch/">ClusterWatch</a> is a callback function triggered when cluster membership changes</td>
-</tr>
-<tr>
 <td><a href="../misk.clustering.weights/-cluster-weight-provider/">misk.clustering.weights.ClusterWeightProvider</a></td>
 <td>Provides the current weight assigned to the cluster.</td>
 </tr>
 <tr>
 <td><a href="../misk.clustering.weights/-cluster-weight-service/">misk.clustering.weights.ClusterWeightService</a></td>
 <td>A marker interface for the Service that produces the <a href="../misk.clustering.weights/-cluster-weight-provider/">ClusterWeightProvider</a>.</td>
+</tr>
+<tr>
+<td><a href="../misk.web/-concurrency-limits-opt-in/">misk.web.ConcurrencyLimitsOptIn</a></td>
+<td>Opt-in to concurrency limits.</td>
 </tr>
 <tr>
 <td><a href="../misk.config/-config/">misk.config.Config</a></td>
@@ -862,10 +858,6 @@
 <td>Describes how an action is processed. This is like the HTTP method but has special cases for web sockets and gRPC. These protocols layer on top of HTTP methods and have different semantics.</td>
 </tr>
 <tr>
-<td><a href="../misk.backoff/-dont-retry-exception/">misk.backoff.DontRetryException</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.environment/-env-var-loader/">misk.environment.EnvVarLoader</a></td>
 <td>Loads an environment variable value.</td>
 </tr>
@@ -902,10 +894,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.clustering.fake/-explicit-cluster-resource-mapper/">misk.clustering.fake.ExplicitClusterResourceMapper</a></td>
-<td>An <a href="../misk.clustering.fake/-explicit-cluster-resource-mapper/">ExplicitClusterResourceMapper</a> is a <a href="../misk.clustering/-cluster-resource-mapper/">ClusterResourceMapper</a> where the mapping is explicit managed.</td>
-</tr>
-<tr>
 <td><a href="../misk.concurrent/-explicit-release-blocking-queue/">misk.concurrent.ExplicitReleaseBlockingQueue</a></td>
 <td>An <a href="../misk.concurrent/-explicit-release-blocking-queue/">ExplicitReleaseBlockingQueue</a> is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html">BlockingQueue</a> that only returns elements from <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html#take()">BlockingQueue.take</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html#poll(long, java.util.concurrent.TimeUnit)">BlockingQueue.poll</a>, and <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Queue.html#peek()">BlockingQueue.peek</a> after a call to <a href="../misk.concurrent/-explicit-release-blocking-queue/release/">ExplicitReleaseBlockingQueue.release</a>. Used by tests that want to explicitly control when pollers receive queued items.</td>
 </tr>
@@ -914,20 +902,8 @@
 <td>An <a href="../misk.concurrent/-explicit-release-delay-queue/">ExplicitReleaseDelayQueue</a> is an <a href="../misk.concurrent/-explicit-release-blocking-queue/">ExplicitReleaseBlockingQueue</a> that release elements in the order in which they expire</td>
 </tr>
 <tr>
-<td><a href="../misk.backoff/-exponential-backoff/">misk.backoff.ExponentialBackoff</a></td>
-<td>Performs exponential backoff with optional jitter. Durations are supplied as functions, so that they can change dynamically as the system is running (e.g. in response to changes in dynamic flags)</td>
-</tr>
-<tr>
 <td><a href="../misk.security.authz/-fake-caller-authenticator/">misk.security.authz.FakeCallerAuthenticator</a></td>
 <td>A caller authenticator that blindly trusts HTTP headers. Unsafe for production use.</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.fake/-fake-cluster/">misk.clustering.fake.FakeCluster</a></td>
-<td>A <a href="../misk.clustering.fake/-fake-cluster/">FakeCluster</a> is a <a href="../misk.clustering/-cluster/">Cluster</a> that is a fake. It delegates entirely to <a href="#">DefaultCluster</a>, but allows us to keep <a href="#">DefaultCluster</a> internal and make it clear that <a href="../misk.clustering.fake/-fake-cluster/">FakeCluster</a> is only intended to be used for fakes.</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.fake/-fake-cluster-module/">misk.clustering.fake.FakeClusterModule</a></td>
-<td><a href="../misk.clustering.fake/-fake-cluster-module/">FakeClusterModule</a> installs fake implementations of the clustering primitives for use in tests</td>
 </tr>
 <tr>
 <td><a href="../misk.clustering.weights/-fake-cluster-weight/">misk.clustering.weights.FakeClusterWeight</a></td>
@@ -944,14 +920,6 @@
 <tr>
 <td><a href="../misk.resources/-fake-files-module/">misk.resources.FakeFilesModule</a></td>
 <td>Adds the provided fake files to the map used by <a href="#">FilesystemLoaderBackend</a>.</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.fake.lease/-fake-lease-manager/">misk.clustering.fake.lease.FakeLeaseManager</a></td>
-<td>A <a href="../misk.clustering.fake.lease/-fake-lease-manager/">FakeLeaseManager</a> provides explicit control over leases for the purposes of testing. By default a lease is considered held, but it can be explicitly marked as not held if desired</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.fake.lease/-fake-lease-module/">misk.clustering.fake.lease.FakeLeaseModule</a></td>
-<td><a href="../misk.clustering.fake.lease/-fake-lease-module/">FakeLeaseModule</a> installs support for leasing using fakes</td>
 </tr>
 <tr>
 <td><a href="../misk.tokens/-fake-token-generator/">misk.tokens.FakeTokenGenerator</a></td>
@@ -986,10 +954,6 @@
 <td>Installs support for flag. Applications should inherit from this module and override <a href="../misk.flags/-flags-module/configure-flags/">configureFlags</a>, calling the various bindXXXFlags methods to make flag variables available</td>
 </tr>
 <tr>
-<td><a href="../misk.backoff/-flat-backoff/">misk.backoff.FlatBackoff</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.environment/-for-env-vars/">misk.environment.ForEnvVars</a></td>
 <td></td>
 </tr>
@@ -1019,10 +983,6 @@
 </tr>
 <tr>
 <td><a href="../misk.web/-get/">misk.web.Get</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../misk.hash/com.google.common.hash.-hash-code/">com.google.common.hash.HashCode</a> (extensions in package misk.hash)</td>
 <td></td>
 </tr>
 <tr>
@@ -1142,10 +1102,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.logging/mu.-k-logger/">mu.KLogger</a> (extensions in package misk.logging)</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.security.keys/-key-service/">misk.security.keys.KeyService</a></td>
 <td>Handles encryption and decryption using keys stored in a key management service</td>
 </tr>
@@ -1159,14 +1115,6 @@
 </tr>
 <tr>
 <td><a href="../misk.clustering.kubernetes/-kubernetes-config/">misk.clustering.kubernetes.KubernetesConfig</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.lease/-lease/">misk.clustering.lease.Lease</a></td>
-<td>A <a href="../misk.clustering.lease/-lease/">Lease</a> is a cluster-wide time-based lock on a given resource. Leases are retrieved via <a href="../misk.clustering.lease/-lease-manager/request-lease/">LeaseManager.requestLease</a>. A ready service instance will automatically attempt to acquire leases that it thinks it should own (typically based on the resource being leased consistently hashing to the service instance), and will continue to maintain the lease for as long as it is still ready. Leases should be released if the service transitions into not ready; to avoid flapping, service lease owners may want to delay releasing leases until they&rsquo;ve been not ready for a particular amount of time.</td>
-</tr>
-<tr>
-<td><a href="../misk.clustering.lease/-lease-manager/">misk.clustering.lease.LeaseManager</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1254,14 +1202,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.clustering/-no-members-available-exception/">misk.clustering.NoMembersAvailableException</a></td>
-<td>Thrown if the cluster does not have any members available.</td>
-</tr>
-<tr>
-<td><a href="../misk.client/-no-op-dns/">misk.client.NoOpDns</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.web.actions/-not-found-action/">misk.web.actions.NotFoundAction</a></td>
 <td></td>
 </tr>
@@ -1344,10 +1284,6 @@
 <tr>
 <td><a href="../misk.web/-query-param/">misk.web.QueryParam</a></td>
 <td></td>
-</tr>
-<tr>
-<td><a href="../misk.random/-random/">misk.random.Random</a></td>
-<td>Abstraction for Java&rsquo;s Random that allows for testing.</td>
 </tr>
 <tr>
 <td><a href="../misk.web.actions/-readiness-check-action/">misk.web.actions.ReadinessCheckAction</a></td>
@@ -1498,16 +1434,8 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.logging/-tag/">misk.logging.Tag</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.resources/-testing-resource-loader-module/">misk.resources.TestingResourceLoaderModule</a></td>
 <td>Can be used instead of <a href="../misk.resources/-resource-loader-module/">ResourceLoaderModule</a> in tests to load filesystem: resources using <a href="#">FakeFilesystemLoaderBackend</a></td>
-</tr>
-<tr>
-<td><a href="../misk.random/-thread-local-random/">misk.random.ThreadLocalRandom</a></td>
-<td>Abstraction for Java&rsquo;s ThreadLocalRandom that allows for testing.</td>
 </tr>
 <tr>
 <td><a href="../misk.security.ssl/-tls-protocols/">misk.security.ssl.TlsProtocols</a></td>

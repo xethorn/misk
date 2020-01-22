@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -614,19 +626,23 @@
 <tbody>
 <tr>
 <td><a href="get-boolean/">getBoolean</a></td>
-<td><code>abstract fun getBoolean(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><br>Calculates the value of an boolean feature flag for the given token and attributes.</td>
+<td><code>abstract fun getBoolean(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><br>Calculates the value of an boolean feature flag for the given key and attributes.<code>open fun getBoolean(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a></td>
 </tr>
 <tr>
 <td><a href="get-enum/">getEnum</a></td>
-<td><code>abstract fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt; getEnum(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clazz:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-enum/#T"><code>T</code></a><br>Calculates the value of an enumerated feature flag for the given token and attributes.</td>
+<td><code>abstract fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt; getEnum(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clazz:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-enum/#T"><code>T</code></a><br>Calculates the value of an enumerated feature flag for the given key and attributes.<code>open fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;&gt; getEnum(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clazz:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a><code>&lt;</code><a href="get-enum/#T"><code>T</code></a><code>&gt;):</code><a href="get-enum/#T"><code>T</code></a></td>
 </tr>
 <tr>
 <td><a href="get-int/">getInt</a></td>
-<td><code>abstract fun getInt(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Calculates the value of an integer feature flag for the given token and attributes.</td>
+<td><code>abstract fun getInt(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><br>Calculates the value of an integer feature flag for the given key and attributes.<code>open fun getInt(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a></td>
+</tr>
+<tr>
+<td><a href="get-json/">getJson</a></td>
+<td><code>abstract fun &lt;T&gt; getJson(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clazz:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a><code>&lt;</code><a href="get-json/#T"><code>T</code></a><code>&gt;, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="get-json/#T"><code>T</code></a><br>Calculates the value of a JSON feature flag for the given key and attributes.<code>open fun &lt;T&gt; getJson(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, clazz:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a><code>&lt;</code><a href="get-json/#T"><code>T</code></a><code>&gt;):</code><a href="get-json/#T"><code>T</code></a></td>
 </tr>
 <tr>
 <td><a href="get-string/">getString</a></td>
-<td><code>abstract fun getString(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><br>Calculates the value of a string feature flag for the given token and attributes.</td>
+<td><code>abstract fun getString(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><br>Calculates the value of a string feature flag for the given key and attributes.<code>open fun getString(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, key:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -642,6 +658,10 @@
 <tr>
 <td><a href="../get-enum/">getEnum</a></td>
 <td><code>fun &lt;T :</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><code>Enum</code></a><code>&lt;</code><a href="../get-enum/#T"><code>T</code></a><code>&gt;&gt;</code><a href="./"><code>FeatureFlags</code></a><code>.getEnum(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="../get-enum/#T"><code>T</code></a></td>
+</tr>
+<tr>
+<td><a href="../get-json/">getJson</a></td>
+<td><code>fun &lt;T&gt;</code><a href="./"><code>FeatureFlags</code></a><code>.getJson(feature:</code><a href="../-feature/"><code>Feature</code></a><code>, token:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, attributes:</code><a href="../-attributes/"><code>Attributes</code></a><code>= Attributes()):</code><a href="../get-json/#T"><code>T</code></a></td>
 </tr>
 </tbody>
 </table>

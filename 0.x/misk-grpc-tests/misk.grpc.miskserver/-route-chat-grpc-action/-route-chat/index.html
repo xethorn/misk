@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -580,6 +592,9 @@
 <h1 id="routechat">RouteChat<a class="headerlink" href="#routechat" title="Permanent link">&para;</a></h1>
 <p><code>fun RouteChat(request: MessageSource&lt;</code><a href="../../../routeguide/-route-note/"><code>RouteNote</code></a><code>&gt;, response: MessageSink&lt;</code><a href="../../../routeguide/-route-note/"><code>RouteNote</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></p>
 <p>Overrides <a href="../../../routeguide/-route-guide-route-chat-blocking-server/-route-chat/">RouteGuideRouteChatBlockingServer.RouteChat</a></p>
+<p>A Bidirectional streaming RPC.</p>
+<p>Accepts a stream of RouteNotes sent while a route is being traversed,
+while receiving other RouteNotes (e.g. from other users).</p>
                 
                   
                 

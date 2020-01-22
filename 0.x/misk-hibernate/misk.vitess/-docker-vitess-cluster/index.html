@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -567,6 +579,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#types" title="Types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
   </a>
@@ -583,6 +602,20 @@
         <li class="md-nav__item">
   <a href="#functions" title="Functions" class="md-nav__link">
     Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companion-object-properties" title="Companion Object Properties" class="md-nav__link">
+    Companion Object Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companion-object-functions" title="Companion Object Functions" class="md-nav__link">
+    Companion Object Functions
   </a>
   
 </li>
@@ -608,7 +641,22 @@
                 
                 <p><a href="../../">misk-hibernate</a> / <a href="../">misk.vitess</a> / <a href="./">DockerVitessCluster</a></p>
 <h1 id="dockervitesscluster">DockerVitessCluster<a class="headerlink" href="#dockervitesscluster" title="Permanent link">&para;</a></h1>
-<p><code>class DockerVitessCluster</code></p>
+<p><code>class DockerVitessCluster :</code><a href="../-database-server/"><code>DatabaseServer</code></a></p>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-log-container-result-callback/">LogContainerResultCallback</a></td>
+<td><code>class LogContainerResultCallback : ResultCallbackTemplate&lt;</code><a href="-log-container-result-callback/"><code>LogContainerResultCallback</code></a><code>, Frame&gt;</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -620,7 +668,7 @@
 <tbody>
 <tr>
 <td><a href="-init-/">&lt;init&gt;</a></td>
-<td><code>DockerVitessCluster(cluster:</code><a href="../-vitess-cluster/"><code>VitessCluster</code></a><code>, docker: DockerClient)</code></td>
+<td><code>DockerVitessCluster(name:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>, moshi: Moshi, resourceLoader: ResourceLoader, config:</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a><code>, docker: DockerClient)</code></td>
 </tr>
 </tbody>
 </table>
@@ -638,8 +686,24 @@
 <td><code>val cluster:</code><a href="../-vitess-cluster/"><code>VitessCluster</code></a></td>
 </tr>
 <tr>
+<td><a href="config/">config</a></td>
+<td><code>val config:</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a></td>
+</tr>
+<tr>
 <td><a href="docker/">docker</a></td>
 <td><code>val docker: DockerClient</code></td>
+</tr>
+<tr>
+<td><a href="moshi/">moshi</a></td>
+<td><code>val moshi: Moshi</code></td>
+</tr>
+<tr>
+<td><a href="name/">name</a></td>
+<td><code>val name:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
+</tr>
+<tr>
+<td><a href="resource-loader/">resourceLoader</a></td>
+<td><code>val resourceLoader: ResourceLoader</code></td>
 </tr>
 </tbody>
 </table>
@@ -653,12 +717,62 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="pull-image/">pullImage</a></td>
+<td><code>fun pullImage():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
 <td><a href="start/">start</a></td>
 <td><code>fun start():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
 </tr>
 <tr>
 <td><a href="stop/">stop</a></td>
 <td><code>fun stop():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="companion-object-properties">Companion Object Properties<a class="headerlink" href="#companion-object-properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-c-o-n-t-a-i-n-e-r_-n-a-m-e_-p-r-e-f-i-x/">CONTAINER_NAME_PREFIX</a></td>
+<td><code>const val CONTAINER_NAME_PREFIX:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
+</tr>
+<tr>
+<td><a href="-v-i-t-e-s-s_-i-m-a-g-e/">VITESS_IMAGE</a></td>
+<td><code>const val VITESS_IMAGE:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
+</tr>
+<tr>
+<td><a href="-v-i-t-e-s-s_-s-h-a/">VITESS_SHA</a></td>
+<td><code>const val VITESS_SHA:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a></td>
+</tr>
+<tr>
+<td><a href="logger/">logger</a></td>
+<td><code>val logger: KLogger</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="companion-object-functions">Companion Object Functions<a class="headerlink" href="#companion-object-functions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="pull-image/">pullImage</a></td>
+<td><code>fun pullImage():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td><a href="start-vitess-daemon/">startVitessDaemon</a></td>
+<td><code>fun startVitessDaemon(qualifier:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><code>KClass</code></a><code>&lt;out</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><code>Annotation</code></a><code>&gt;, config:</code><a href="../../misk.jdbc/-data-source-config/"><code>DataSourceConfig</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>A helper method to start the Vitess cluster outside of the dev server or test process, to enable rapid iteration. This should be called directly a <code>main()</code> function, for example:</td>
 </tr>
 </tbody>
 </table>

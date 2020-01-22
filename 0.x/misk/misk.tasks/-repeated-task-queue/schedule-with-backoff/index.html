@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -578,7 +590,7 @@
                 
                 <p><a href="../../../">misk</a> / <a href="../../">misk.tasks</a> / <a href="../">RepeatedTaskQueue</a> / <a href="./">scheduleWithBackoff</a></p>
 <h1 id="schedulewithbackoff">scheduleWithBackoff<a class="headerlink" href="#schedulewithbackoff" title="Permanent link">&para;</a></h1>
-<p><code>fun scheduleWithBackoff(timeBetweenRuns:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><code>Duration</code></a><code>, initialDelay:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><code>Duration</code></a><code>= timeBetweenRuns, noWorkBackoff:</code><a href="../../../misk.backoff/-backoff/"><code>Backoff</code></a><code>= config.defaultBackoff(timeBetweenRuns), failureBackoff:</code><a href="../../../misk.backoff/-backoff/"><code>Backoff</code></a><code>= config.defaultBackoff(timeBetweenRuns), task: () -&gt;</code><a href="../../-status/"><code>Status</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></p>
+<p><code>fun scheduleWithBackoff(timeBetweenRuns:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><code>Duration</code></a><code>, initialDelay:</code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><code>Duration</code></a><code>= timeBetweenRuns, noWorkBackoff: Backoff = config.defaultBackoff(timeBetweenRuns), failureBackoff: Backoff = config.defaultBackoff(timeBetweenRuns), task: () -&gt;</code><a href="../../-status/"><code>Status</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></p>
 <p>Schedules a task to run repeatedly at a fixed delay, with back-off for errors and lack
 of available work</p>
                 

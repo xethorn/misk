@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -578,7 +590,7 @@
                 
                 <p><a href="../../../">misk-aws</a> / <a href="../../">misk.jobqueue.sqs</a> / <a href="../">AwsSqsJobQueueConfig</a> / <a href="./">&lt;init&gt;</a></p>
 <h1 id="init">&lt;init&gt;<a class="headerlink" href="#init" title="Permanent link">&para;</a></h1>
-<p><code>AwsSqsJobQueueConfig(concurrent_receivers_per_queue:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 1, external_queues:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><code>Map</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>,</code><a href="../../-aws-sqs-queue-config/"><code>AwsSqsQueueConfig</code></a><code>&gt; = mapOf(), consumer_thread_pool_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 4, task_queue: RepeatedTaskQueueConfig = RepeatedTaskQueueConfig())</code></p>
+<p><code>AwsSqsJobQueueConfig(external_queues:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><code>Map</code></a><code>&lt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>,</code><a href="../../-aws-sqs-queue-config/"><code>AwsSqsQueueConfig</code></a><code>&gt; = mapOf(), message_batch_size:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 10, task_queue: RepeatedTaskQueueConfig? = null, clustered_consumers:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><code>Boolean</code></a><code>= true, queue_attribute_importer_frequency_ms:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><code>Long</code></a><code>= 1000)</code></p>
 <p><a href="../">AwsSqsJobQueueConfig</a> is the configuration for job queueing backed by Amazon&rsquo;s
 Simple Queuing Service</p>
                 

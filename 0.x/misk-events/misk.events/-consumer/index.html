@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -640,7 +652,7 @@
 <tbody>
 <tr>
 <td><a href="subscribe/">subscribe</a></td>
-<td><code>abstract fun subscribe(topic:</code><a href="../-topic/"><code>Topic</code></a><code>, handler:</code><a href="-handler/"><code>Handler</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>listens for incoming events to a topic</td>
+<td><code>abstract fun subscribe(topic: Topic, handler:</code><a href="-handler/"><code>Handler</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>listens for incoming events to a topic</td>
 </tr>
 </tbody>
 </table>
@@ -655,7 +667,7 @@
 <tbody>
 <tr>
 <td><a href="../subscribe/">subscribe</a></td>
-<td><code>fun</code><a href="./"><code>Consumer</code></a><code>.subscribe(topic:</code><a href="../-topic/"><code>Topic</code></a><code>, handler: (</code><a href="-context/"><code>Context</code></a><code>,</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;</code><a href="../-event/"><code>Event</code></a><code>&gt;) -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>listens for incoming events, dispatching them to a handler function</td>
+<td><code>fun</code><a href="./"><code>Consumer</code></a><code>.subscribe(topic: Topic, handler: (</code><a href="-context/"><code>Context</code></a><code>,</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><code>List</code></a><code>&lt;Event&gt;) -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>listens for incoming events, dispatching them to a handler function</td>
 </tr>
 </tbody>
 </table>

@@ -307,6 +307,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../misk-events-core/" title="misk-events-core" class="md-nav__link">
+      misk-events-core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../misk-events/" title="misk-events" class="md-nav__link">
       misk-events
     </a>
@@ -614,6 +626,10 @@
 <td><a href="../misk.jdbc/-cluster/">Cluster</a> provides a consistent abstraction for interacting with various database-related resources <a href="../misk.jdbc/-cluster/#T">T</a> based on their role in the underlying database topology.</td>
 </tr>
 <tr>
+<td><a href="../misk.vitess/-cockroach-cluster/">misk.vitess.CockroachCluster</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../misk.hibernate/-constraint/">misk.hibernate.Constraint</a></td>
 <td>Annotates a function on a subinterface of <a href="../misk.hibernate/-query/">Query</a> to indicate which column (or path of columns) it constrains and using which operator.</td>
 </tr>
@@ -658,6 +674,10 @@
 <td>Figures out what database name to use for a given config. Tests use this to pool many databases for concurrent execution. In development, staging, and production the database never changes.</td>
 </tr>
 <tr>
+<td><a href="../misk.vitess/-database-server/">misk.vitess.DatabaseServer</a></td>
+<td>Represents a database server for development/testing generally running in Docker.</td>
+</tr>
+<tr>
 <td><a href="../misk.hibernate/-db-child/">misk.hibernate.DbChild</a></td>
 <td>Marker interface for sharded entities that stay with their root inside an entity group. Entity group children will always stay inside the same shard regardless of shard splits and so on. That means transactions inside an entity group is always safe. A typical sharding strategy has a <code>DbCustomer</code> as a root and all of the entities that belong to that customer as children.</td>
 </tr>
@@ -683,6 +703,14 @@
 </tr>
 <tr>
 <td><a href="../misk.hibernate/-destination/">misk.hibernate.Destination</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.vitess/-docker-cockroach-cluster/">misk.vitess.DockerCockroachCluster</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.vitess/-docker-tidb-cluster/">misk.vitess.DockerTidbCluster</a></td>
 <td></td>
 </tr>
 <tr>
@@ -734,10 +762,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../misk.vitess/-log-container-result-callback/">misk.vitess.LogContainerResultCallback</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../misk.hibernate/-operator/">misk.hibernate.Operator</a></td>
 <td></td>
 </tr>
@@ -762,6 +786,10 @@
 <td><a href="../misk.hibernate/-post-commit-hook-failed-exception/">PostCommitHookFailedException</a> is raised when a code run as part of a post-commit hook fails. Because post-commit hooks are run after the transaction is committed, failure in these hooks does not cause the transaction to rollback, and applications may need to differentiate the two cases (exception occurred and caused the transaction to rollback, exception occurred during a post-commit hook</td>
 </tr>
 <tr>
+<td><a href="../misk.hibernate/java.sql.-prepared-statement/">java.sql.PreparedStatement</a> (extensions in package misk.hibernate)</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../misk.hibernate/-projection/">misk.hibernate.Projection</a></td>
 <td>Marker interface for query projections.</td>
 </tr>
@@ -779,6 +807,10 @@
 </tr>
 <tr>
 <td><a href="../misk.jdbc/-real-database-pool/">misk.jdbc.RealDatabasePool</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.hibernate/java.sql.-result-set/">java.sql.ResultSet</a> (extensions in package misk.hibernate)</td>
 <td></td>
 </tr>
 <tr>
@@ -814,8 +846,12 @@
 <td><ul><li></li></ul></td>
 </tr>
 <tr>
-<td><a href="../misk.vitess/-start-vitess-service/">misk.vitess.StartVitessService</a></td>
+<td><a href="../misk.vitess/-start-database-service/">misk.vitess.StartDatabaseService</a></td>
 <td>All Vitess clusters used by the app/test are tracked in a global cache as a <a href="../misk.vitess/-docker-vitess-cluster/">DockerVitessCluster</a>.</td>
+</tr>
+<tr>
+<td><a href="../misk.vitess/-start-vitess-service/">misk.vitess.StartVitessService</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../misk.jdbc/-string-builder-carrier/">misk.jdbc.StringBuilderCarrier</a></td>
@@ -834,12 +870,28 @@
 <td></td>
 </tr>
 <tr>
+<td><a href="../misk.vitess/-tidb-cluster/">misk.vitess.TidbCluster</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../misk.hibernate/-transacter/">misk.hibernate.Transacter</a></td>
 <td>Provides explicit block-based transaction demarcation.</td>
 </tr>
 <tr>
 <td><a href="../misk.hibernate/-transacter-service/">misk.hibernate.TransacterService</a></td>
 <td>Marker interface for services that provide database transactors.</td>
+</tr>
+<tr>
+<td><a href="../misk.hibernate/-transformed-type/">misk.hibernate.TransformedType</a></td>
+<td><a href="../misk.hibernate/-transformed-type/">TransformedType</a> is a meta-annotation for assigning arbitrary transformers to entity fields. Use it to annotate attributes that will mark a field to be transformed.</td>
+</tr>
+<tr>
+<td><a href="../misk.hibernate/-transformer/">misk.hibernate.Transformer</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../misk.hibernate/-transformer-context/">misk.hibernate.TransformerContext</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../misk.hibernate/-validation-report/">misk.hibernate.ValidationReport</a></td>
