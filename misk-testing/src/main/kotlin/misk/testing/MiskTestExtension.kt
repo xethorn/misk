@@ -149,10 +149,21 @@ internal class MiskTestExtension : BeforeEachCallback, AfterEachCallback {
 
 private fun ExtensionContext.startService(): Boolean {
   val namespace = ExtensionContext.Namespace.create(requiredTestClass)
-  // First check the context cache
-  return getStore(namespace).getOrComputeIfAbsent("startService",
-      { requiredTestClass.getAnnotationsByType(MiskTest::class.java)[0].startService },
-      Boolean::class.java)
+  var currentClass = requiredTestClass
+  while (true) {
+    val annotations = currentClass.getAnnotationsByType(MiskTest::class.java)
+    if (annotations.isNotEmpty()) {
+      return getStore(namespace).getOrComputeIfAbsent("startService",
+          { annotations[0].startService },
+          Boolean::class.java)
+    }
+
+    currentClass = currentClass.declaringClass
+    if (currentClass == null) {
+      break
+    }
+  }
+  return false
 }
 
 private fun ExtensionContext.getActionTestModules(): Iterable<Module> {

@@ -6,6 +6,8 @@ import misk.MiskTestingServiceModule
 import misk.testing.MiskTest
 import misk.testing.MiskTestModule
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import javax.inject.Inject
 import kotlin.test.assertFailsWith
@@ -32,15 +34,28 @@ class LogCollectorTest {
     assertThat(logCollector.takeMessages()).containsExactly("another log message", "and a third!")
   }
 
-  @Test
-  fun filterByLevel() {
-    val logger = getLogger<LogCollectorTest>()
+  @Nested
+  inner class WithLevels {
+    @Nested
+    inner class WithInfoLevel {
+      @MiskTestModule
+      val module = Modules.combine(
+          MiskTestingServiceModule(),
+          LogCollectorModule()
+      )
 
-    logger.debug("this is DEBUG.")
-    logger.info("this is INFO.")
-    logger.warn("this is WARN!")
-    assertThat(logCollector.takeMessages(minLevel = Level.INFO))
-        .containsExactly("this is INFO.", "this is WARN!")
+      @Inject lateinit var logCollector: LogCollector
+
+      @Test fun returnInfoAndWarn() {
+        val logger = getLogger<LogCollectorTest>()
+
+        logger.debug("this is DEBUG.")
+        logger.info("this is INFO.")
+        logger.warn("this is WARN!")
+        assertThat(logCollector.takeMessages(minLevel = Level.INFO))
+            .containsExactly("this is INFO.", "this is WARN!")
+      }
+    }
   }
 
   @Test
